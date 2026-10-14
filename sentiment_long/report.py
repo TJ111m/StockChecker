@@ -82,6 +82,8 @@ def render(summary: dict) -> str:
         "",
         "生产规则在看到这些数字之前已经写死：公众语气或恐慌关注度恶化达到 1.5 个过去标准差时，在信号日收盘做多 SPY，持有随后 2 个交易日，单边成本 5 个基点。机器学习模型只作对照，不替换这条规则。持有期也不是从下面的网格里挑出来的。",
         "",
+        _verdict(wiki, news_2010, news_2020, news_slow, price, events),
+        "",
         "## 数据是否接对",
         "",
         f"价格从 {sanity['first']} 到 {sanity['last']}，共 {sanity['rows']} 个交易日。新闻语气用到 {sanity['news_last']}。",
@@ -122,9 +124,11 @@ def render(summary: dict) -> str:
         "",
         "回归：" + _reg_sentence(regs.get("vix_fast_from_2010")),
         "",
-        "如果舆论系数在放进当日收益之后就消失，而价格冲击本身还有预测力，那么舆论只是在重复已经发生的下跌。",
+        "净值与交易笔数用的是同一套不重叠持有：进场后只拿满两个交易日，持有期内的新信号要等这次结束才再进。价格冲击的线性系数同样不为正；它的极端阈值有更高的毛超额，但没有越过 5% 的循环移位门槛。舆论规则没有比它更强。",
         "",
-        "### 应当失败的对照",
+        "### 追涨对照",
+        "",
+        "事先的预期是：新闻语气变好就做多，超额不该为正。实际若为正，只说明这段样本没有支持该预期，生产规则仍然不改成追涨。",
         "",
         "新闻语气大幅变好就追多，持有两日：" + _trade_sentence(momentum),
         "",
@@ -161,6 +165,40 @@ def render(summary: dict) -> str:
         ]
     )
     return "\n".join(lines) + "\n"
+
+
+def _verdict(wiki, news_2010, news_2020, news_slow, price, events) -> str:
+    def net(row):
+        if row is None or row.get("excess") is None or row.get("cost_per_side") is None:
+            return None
+        return row["excess"] - 2 * row["cost_per_side"]
+
+    panic = events["panic_2d"]["clustered"]["mean"]
+    bits = [
+        "维基恐慌关注度不是可用的做多信号："
+        f"2016 年 7 月之后两日毛超额 {bp(None if wiki is None else wiki.get('excess'))}，"
+        f"扣掉 10 bp 往返后 {bp(net(wiki))}。"
+    ]
+    bits.append(
+        "新闻语气的快速执行有很小的毛超额"
+        f"（2010 年以来 {bp(None if news_2010 is None else news_2010.get('excess'))}，"
+        f"2020-04-07 之后 {bp(None if news_2020 is None else news_2020.get('excess'))}）。"
+        f"扣掉往返成本后分别是 {bp(net(news_2010))} 和 {bp(net(news_2020))}。"
+        f"把进场再晚一个交易日，2020-04 之后的毛超额变成 {bp(None if news_slow is None else news_slow.get('excess'))}。"
+    )
+    bits.append(
+        f"价格冲击对照的毛超额是 {bp(None if price is None else price.get('excess'))}。"
+        "舆论没有跑赢「大跌之后的短反弹」这一条非舆论规则。"
+    )
+    bits.append(
+        f"70 个登记事件里，恐慌日收盘后两日收益按叙事簇平均为 {bp(panic)}。"
+        "事件研究不支持在恐慌当天收盘抄底。"
+    )
+    bits.append(
+        "所以这套系统可以告诉你冲击有多大、历史命中率是多少、按规则该持有两日；"
+        "它没有得到一个扣费后仍稳定为正、并且经得起晚一天执行的做多边缘。"
+    )
+    return " ".join(bits)
 
 
 def _cluster_line(title: str, block: dict) -> str:

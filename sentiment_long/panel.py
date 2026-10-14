@@ -108,7 +108,8 @@ def sanity_check(panel: pd.DataFrame) -> dict:
     january = float(wiki.loc["2020-01-01":"2020-01-31"].mean())
     checks["wiki_march_2020"] = march
     checks["wiki_january_2020"] = january
-    if not np.isfinite(march) or not np.isfinite(january) or march <= january * 1.15:
+    # `wiki_fear` is an average of log pageviews, so a 0.3 rise is about 35% more views.
+    if not np.isfinite(march) or not np.isfinite(january) or march <= january + 0.3:
         raise AssertionError(f"wiki fear did not rise in March 2020 ({january} → {march})")
     checks["rows"] = int(len(panel))
     checks["first"] = str(panel.index.min().date())

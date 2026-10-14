@@ -10,6 +10,28 @@ import numpy as np
 import pandas as pd
 
 
+def cover_nonoverlapping(signal: np.ndarray, hold: int, delay: int) -> np.ndarray:
+    """Hold exactly `hold` sessions, then ignore new signals until that hold ends.
+
+    This is the same trade list as `iter_fixed_trades`. A clustered shock does not
+    extend the hold past the first signal's window.
+    """
+    signal = np.asarray(signal, dtype=bool)
+    n = len(signal)
+    cover = np.zeros(n, dtype=float)
+    t = 0
+    while t < n:
+        if signal[t]:
+            start = t + 1 + delay
+            if start < n:
+                cover[start : min(n, start + hold)] = 1.0
+            exit_idx = t + delay + hold
+            t = exit_idx + 1 if exit_idx >= t else t + 1
+        else:
+            t += 1
+    return cover
+
+
 def cover_from_signal(signal: np.ndarray, hold: int, delay: int) -> np.ndarray:
     signal = np.asarray(signal, dtype=bool)
     n = len(signal)

@@ -30,6 +30,13 @@ class TimingTests(unittest.TestCase):
         self.assertEqual(cover.tolist(), [0.0, 0.0, 1.0, 1.0, 0.0])
         self.assertAlmostEqual(trade_gross(close, 1, 2, 0), 0.0)
 
+    def test_nonoverlapping_hold_does_not_extend_through_a_cluster(self):
+        from sentiment_long.engine import cover_nonoverlapping
+
+        signal = np.array([True, True, True, False, False, False, False])
+        cover = cover_nonoverlapping(signal, hold=2, delay=0)
+        self.assertEqual(cover.tolist(), [0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0])
+
     def test_tetlock_delay_skips_the_next_session(self):
         signal = np.array([True, False, False, False, False, False, False])
         cover = cover_from_signal(signal, hold=4, delay=1)

@@ -11,6 +11,7 @@ import pandas as pd
 from scipy.stats import beta
 
 from sentiment_long.config import (
+    COST_PER_SIDE,
     DELAY_FAST,
     EVENT_HORIZONS,
     HOLD_FAST,
@@ -158,6 +159,9 @@ def _pack(
         "unconditional_hit_rate": prior_hit,
         "expected_horizon_return": None if not recommended or n == 0 else float(shrunk_mean),
         "expected_excess_return": None if not recommended or n == 0 else float(shrunk_excess),
+        "expected_excess_return_net": None
+        if not recommended or n == 0
+        else float(shrunk_excess - 2 * COST_PER_SIDE),
         "unshrunk_excess_return": None if not np.isfinite(unshrunk) else float(unshrunk),
         "hold_trading_days": HOLD_FAST if recommended else 0,
         "policy_hold_trading_days": HOLD_FAST,
@@ -226,6 +230,8 @@ def _rationale(row: dict) -> str:
     z_text = "缺失" if z is None else f"{z:.2f}"
     reason = row["reason"]
     if reason == "no_signal":
+        if z is None:
+            return "这一天没有可用的舆论冲击，不做多。"
         return f"恶化冲击 z={z_text}，没有达到事先注册的 {SHOCK_Z:.1f}，不做多。"
     if reason == "killed_no_edge":
         return (
@@ -243,11 +249,14 @@ def _rationale(row: dict) -> str:
         )
     excess = row.get("expected_excess_return")
     excess_text = "缺失" if excess is None else f"{excess * 10000:.1f} bp"
+    net = row.get("expected_excess_return_net")
+    net_text = "缺失" if net is None else f"{net * 10000:.1f} bp"
     prob = row.get("probability_up")
     prob_text = "缺失" if prob is None else f"{prob:.1%}"
     return (
-        f"恶化冲击 z={z_text}。按冻结的两日逆向规则做多，收缩后的超额约 {excess_text}，"
-        f"上涨概率 {prob_text}。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        f"恶化冲击 z={z_text}。按冻结的两日逆向规则做多，收缩后的毛超额约 {excess_text}，"
+        f"扣除事先注册的 10 bp 往返后约 {net_text}，上涨概率 {prob_text}。"
+        "概率是以往不重叠交易的命中率，不是模型当场的信心。"
     )
 
 

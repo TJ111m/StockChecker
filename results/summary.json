@@ -1,0 +1,4186 @@
+{
+  "sanity": {
+    "spy_2020_03_16": -0.10942377857763974,
+    "spy_2020_03_24": 0.09060334784841895,
+    "spy_2025_04_04": -0.05854298617947307,
+    "vix_2020_03_16": 82.69000244140625,
+    "wiki_march_2020": 7.270463693379591,
+    "wiki_january_2020": 6.467614606022595,
+    "rows": 8484,
+    "first": "1993-01-29",
+    "last": "2026-10-13",
+    "news_last": "2026-10-09",
+    "wiki_pages": [
+      "Stock_market_crash",
+      "Recession",
+      "Bear_market",
+      "Bankruptcy",
+      "Bank_run",
+      "Unemployment",
+      "Financial_crisis",
+      "Inflation",
+      "Layoff",
+      "Volatility_(finance)",
+      "Default_(finance)",
+      "Great_Depression",
+      "Economic_collapse",
+      "Wall_Street"
+    ]
+  },
+  "strategies": [
+    {
+      "source": "news",
+      "timing": "fast",
+      "role": "confirmatory",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.08483412322274882,
+      "sharpe": 0.12083578788513062,
+      "cagr": 0.005739490791177859,
+      "maxdd": -0.20781860931163654,
+      "equity_end": 1.1005817724322438,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": 0.2827172827172827,
+      "n_trades": 179,
+      "hit_rate": 0.6201117318435754,
+      "mean_trade": 0.0017291272362315493,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.0005720552410004493,
+      "t_excess": 0.39279947615486444
+    },
+    {
+      "source": "news",
+      "timing": "fast",
+      "role": "confirmatory",
+      "shock_z": 1.5,
+      "start": "2020-04-07",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 1638,
+      "exposure": 0.07081807081807082,
+      "sharpe": 0.25612684700930993,
+      "cagr": 0.010752251512158528,
+      "maxdd": -0.10007170586776615,
+      "equity_end": 1.071989825176327,
+      "buyhold_sharpe": 1.1369020478890133,
+      "buyhold_cagr": 0.19662769210712794,
+      "buyhold_maxdd": -0.2449637857580501,
+      "null_p": 0.3386613386613387,
+      "n_trades": 58,
+      "hit_rate": 0.6206896551724138,
+      "mean_trade": 0.0022932033332662906,
+      "mean_uncond": 0.0015163831971835488,
+      "excess": 0.0007768201360827418,
+      "t_excess": 0.43271664716170266
+    },
+    {
+      "source": "news",
+      "timing": "slow",
+      "role": "confirmatory",
+      "shock_z": 1.5,
+      "start": "2020-04-07",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 1,
+      "cost_per_side": 0.0005,
+      "n_days": 1638,
+      "exposure": 0.0695970695970696,
+      "sharpe": -0.43458760976203564,
+      "cagr": -0.020451894829820683,
+      "maxdd": -0.1737356922593365,
+      "equity_end": 0.8743141308551733,
+      "buyhold_sharpe": 1.1369020478890133,
+      "buyhold_cagr": 0.19662769210712794,
+      "buyhold_maxdd": -0.2449637857580501,
+      "null_p": 0.951048951048951,
+      "n_trades": 57,
+      "hit_rate": 0.6140350877192983,
+      "mean_trade": -0.0012765613195879532,
+      "mean_uncond": 0.0015163831971835488,
+      "excess": -0.002792944516771502,
+      "t_excess": -1.6654340474960156
+    },
+    {
+      "source": "news",
+      "timing": "tetlock",
+      "role": "confirmatory",
+      "shock_z": 1.5,
+      "start": "2020-04-07",
+      "end": "2026-10-13",
+      "hold": 4,
+      "delay": 1,
+      "cost_per_side": 0.0005,
+      "n_days": 1638,
+      "exposure": 0.11721611721611722,
+      "sharpe": 0.3026654648509762,
+      "cagr": 0.01637164726918572,
+      "maxdd": -0.16732457777253784,
+      "equity_end": 1.1113261138119177,
+      "buyhold_sharpe": 1.1369020478890133,
+      "buyhold_cagr": 0.19662769210712794,
+      "buyhold_maxdd": -0.2449637857580501,
+      "null_p": null,
+      "n_trades": 48,
+      "hit_rate": 0.6458333333333334,
+      "mean_trade": 0.0033819497135963183,
+      "mean_uncond": 0.00299061226711174,
+      "excess": 0.0003913374464845783,
+      "t_excess": 0.14262918780498643
+    },
+    {
+      "source": "wiki",
+      "timing": "fast",
+      "role": "confirmatory",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.12611218568665378,
+      "sharpe": -0.07964954155027666,
+      "cagr": -0.008886903822808878,
+      "maxdd": -0.27491536779951586,
+      "equity_end": 0.9124985505257656,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": 0.41858141858141856,
+      "n_trades": 163,
+      "hit_rate": 0.6196319018404908,
+      "mean_trade": 0.0006007240271928067,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.0006521401029457053,
+      "t_excess": -0.47117931209661423
+    },
+    {
+      "source": "wiki",
+      "timing": "slow",
+      "role": "confirmatory",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 1,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.1253384912959381,
+      "sharpe": -0.2674286730896463,
+      "cagr": -0.02337066040722391,
+      "maxdd": -0.24323208320534528,
+      "equity_end": 0.7846005402143647,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 162,
+      "hit_rate": 0.5802469135802469,
+      "mean_trade": -0.0003453788964742684,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.0015982430266127804,
+      "t_excess": -1.1786402997654921
+    },
+    {
+      "source": "vix",
+      "timing": "fast",
+      "role": "control",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.08530805687203792,
+      "sharpe": 0.13367555478827547,
+      "cagr": 0.00754125810259465,
+      "maxdd": -0.2517950193299129,
+      "equity_end": 1.1340693400941089,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": 0.23776223776223776,
+      "n_trades": 180,
+      "hit_rate": 0.5555555555555556,
+      "mean_trade": 0.0018829305726450296,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.0007258585774139296,
+      "t_excess": 0.5081928884631574
+    },
+    {
+      "source": "price",
+      "timing": "fast",
+      "role": "control",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.10284360189573459,
+      "sharpe": 0.23352164763809682,
+      "cagr": 0.017093861696884316,
+      "maxdd": -0.18090970098370496,
+      "equity_end": 1.3282141333578368,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": 0.06993006993006994,
+      "n_trades": 217,
+      "hit_rate": 0.5668202764976958,
+      "mean_trade": 0.002494865476468074,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.001337793481236974,
+      "t_excess": 1.0245298456125438
+    },
+    {
+      "source": "news",
+      "timing": "fast",
+      "role": "horse_race",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.0804642166344294,
+      "sharpe": 0.18971473883097006,
+      "cagr": 0.010838174838994075,
+      "maxdd": -0.20781860931163687,
+      "equity_end": 1.1169247478090818,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 104,
+      "hit_rate": 0.6442307692307693,
+      "mean_trade": 0.002319599804574404,
+      "mean_uncond": 0.001252864130138512,
+      "excess": 0.001066735674435892,
+      "t_excess": 0.4862506519741686
+    },
+    {
+      "source": "vix",
+      "timing": "fast",
+      "role": "horse_race",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.08201160541586074,
+      "sharpe": 0.13818055474267338,
+      "cagr": 0.008293785972497636,
+      "maxdd": -0.2517950193299128,
+      "equity_end": 1.0884190851655768,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 106,
+      "hit_rate": 0.5849056603773585,
+      "mean_trade": 0.0019817783726470526,
+      "mean_uncond": 0.001252864130138512,
+      "excess": 0.0007289142425085406,
+      "t_excess": 0.3914321782258201
+    },
+    {
+      "source": "price",
+      "timing": "fast",
+      "role": "horse_race",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.09593810444874275,
+      "sharpe": 0.18492081179080794,
+      "cagr": 0.013484021309897454,
+      "maxdd": -0.18090970098370496,
+      "equity_end": 1.147280076982304,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 124,
+      "hit_rate": 0.5725806451612904,
+      "mean_trade": 0.002329826151881937,
+      "mean_uncond": 0.001252864130138512,
+      "excess": 0.0010769620217434249,
+      "t_excess": 0.5696052784365673
+    },
+    {
+      "source": "news_momentum",
+      "timing": "fast",
+      "role": "negative_control",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.11753554502369669,
+      "sharpe": 0.3384325995775662,
+      "cagr": 0.015363991768525098,
+      "maxdd": -0.11786156216250121,
+      "equity_end": 1.2908868187558906,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 248,
+      "hit_rate": 0.5967741935483871,
+      "mean_trade": 0.002102057647576146,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.000944985652345046,
+      "t_excess": 1.2462199173667243
+    },
+    {
+      "source": "news_momentum",
+      "timing": "next_day",
+      "role": "negative_control",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 1,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.05947867298578199,
+      "sharpe": 0.051599414642954096,
+      "cagr": 0.0011869375366018176,
+      "maxdd": -0.1785392286540599,
+      "equity_end": 1.0200633231778504,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 251,
+      "hit_rate": 0.5617529880478087,
+      "mean_trade": 0.001118802606174153,
+      "mean_uncond": 0.0005844032851120099,
+      "excess": 0.0005343993210621432,
+      "t_excess": 0.9518313736539626
+    },
+    {
+      "source": "epu",
+      "timing": "fast",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.11943127962085308,
+      "sharpe": 0.14048120928309282,
+      "cagr": 0.007499652354478581,
+      "maxdd": -0.20919446176313106,
+      "equity_end": 1.133285367596451,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 252,
+      "hit_rate": 0.626984126984127,
+      "mean_trade": 0.0016015034334903417,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.00044443143825924174,
+      "t_excess": 0.4898051531862126
+    },
+    {
+      "source": "agreement",
+      "timing": "fast",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.010058027079303675,
+      "sharpe": -0.22091877371828436,
+      "cagr": -0.009474230001617956,
+      "maxdd": -0.15975072390224465,
+      "equity_end": 0.906966866892264,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 13,
+      "hit_rate": 0.6923076923076923,
+      "mean_trade": -0.005519308899022712,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.006772173029161224,
+      "t_excess": -0.5538439572078457
+    },
+    {
+      "source": "news",
+      "timing": "fast_z1.0",
+      "role": "exploratory",
+      "shock_z": 1.0,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.17962085308056872,
+      "sharpe": 0.18841148327778012,
+      "cagr": 0.012674928059686286,
+      "maxdd": -0.32490612438748023,
+      "equity_end": 1.2348146160861584,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 378,
+      "hit_rate": 0.5846560846560847,
+      "mean_trade": 0.0016728172752089327,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.0005157452799778328,
+      "t_excess": 0.5588393438698787
+    },
+    {
+      "source": "news",
+      "timing": "fast_z2.0",
+      "role": "exploratory",
+      "shock_z": 2.0,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.037914691943127965,
+      "sharpe": 0.34054241916783967,
+      "cagr": 0.013186221759712291,
+      "maxdd": -0.07784695318653057,
+      "equity_end": 1.2452965458668543,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 80,
+      "hit_rate": 0.6625,
+      "mean_trade": 0.003932009227571693,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.002774937232340593,
+      "t_excess": 1.2712252441013272
+    },
+    {
+      "source": "news",
+      "timing": "hold1",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 1,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.04526066350710901,
+      "sharpe": 0.33568863676719907,
+      "cagr": 0.01555017042109319,
+      "maxdd": -0.07921836717187458,
+      "equity_end": 1.2948563138079514,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 191,
+      "hit_rate": 0.5863874345549738,
+      "mean_trade": 0.0024588906200258822,
+      "mean_uncond": 0.0005844032851120099,
+      "excess": 0.0018744873349138724,
+      "t_excess": 1.7771558085760928
+    },
+    {
+      "source": "news",
+      "timing": "hold4",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 4,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.15071090047393365,
+      "sharpe": 0.3524315470504849,
+      "cagr": 0.026787546065628387,
+      "maxdd": -0.1972697808236139,
+      "equity_end": 1.556877225989444,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 159,
+      "hit_rate": 0.6477987421383647,
+      "mean_trade": 0.004104632390888815,
+      "mean_uncond": 0.002311216338496149,
+      "excess": 0.0017934160523926657,
+      "t_excess": 0.9103025273241336
+    },
+    {
+      "source": "news",
+      "timing": "hold5",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 5,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.17772511848341233,
+      "sharpe": 0.5214034673675391,
+      "cagr": 0.044719552722636946,
+      "maxdd": -0.21014510470055003,
+      "equity_end": 2.080510746561271,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 150,
+      "hit_rate": 0.6666666666666666,
+      "mean_trade": 0.006252353502380012,
+      "mean_uncond": 0.002881341240176165,
+      "excess": 0.0033710122622038472,
+      "t_excess": 1.5405219827534156
+    },
+    {
+      "source": "news",
+      "timing": "hold10",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 10,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.28672985781990523,
+      "sharpe": 0.45891318672774206,
+      "cagr": 0.04423631331122513,
+      "maxdd": -0.25542862207729267,
+      "equity_end": 2.0644537747440874,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 121,
+      "hit_rate": 0.6776859504132231,
+      "mean_trade": 0.007513417203974175,
+      "mean_uncond": 0.00572130394106957,
+      "excess": 0.001792113262904605,
+      "t_excess": 0.6245752712139145
+    },
+    {
+      "source": "wiki",
+      "timing": "fast_z1.0",
+      "role": "exploratory",
+      "shock_z": 1.0,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.2901353965183752,
+      "sharpe": -0.3048353779925985,
+      "cagr": -0.03625949390018657,
+      "maxdd": -0.40624174040668515,
+      "equity_end": 0.6846425008778652,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 375,
+      "hit_rate": 0.576,
+      "mean_trade": 0.0001255943257637,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.001127269804374812,
+      "t_excess": -1.3382224921951387
+    },
+    {
+      "source": "wiki",
+      "timing": "fast_z2.0",
+      "role": "exploratory",
+      "shock_z": 2.0,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.02862669245647969,
+      "sharpe": -0.45515723270493075,
+      "cagr": -0.029541653034223736,
+      "maxdd": -0.31092384010306784,
+      "equity_end": 0.7352073917007607,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 37,
+      "hit_rate": 0.43243243243243246,
+      "mean_trade": -0.006815610676621083,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.008068474806759594,
+      "t_excess": -1.630076062311844
+    },
+    {
+      "source": "wiki",
+      "timing": "hold1",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 1,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.06460348162475822,
+      "sharpe": -0.13174968960660563,
+      "cagr": -0.010183198313452935,
+      "maxdd": -0.2574338902048777,
+      "equity_end": 0.9003298330957072,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 167,
+      "hit_rate": 0.5269461077844312,
+      "mean_trade": 0.0004930253729035968,
+      "mean_uncond": 0.0006329467151186032,
+      "excess": -0.00013992134221500643,
+      "t_excess": -0.11618970191671638
+    },
+    {
+      "source": "wiki",
+      "timing": "hold4",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 4,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.24294003868471953,
+      "sharpe": 0.0426311428006397,
+      "cagr": -0.0012088917009714928,
+      "maxdd": -0.370651246803803,
+      "equity_end": 0.9876684288081644,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 157,
+      "hit_rate": 0.6815286624203821,
+      "mean_trade": 0.0012771332429680478,
+      "mean_uncond": 0.00250640663284035,
+      "excess": -0.0012292733898723023,
+      "t_excess": -0.5898361999822753
+    },
+    {
+      "source": "wiki",
+      "timing": "hold5",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 5,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.2263056092843327,
+      "sharpe": 0.11957334965836158,
+      "cagr": 0.006924096672980662,
+      "maxdd": -0.20608475037138718,
+      "equity_end": 1.0733473980278059,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 117,
+      "hit_rate": 0.6666666666666666,
+      "mean_trade": 0.001934737917310291,
+      "mean_uncond": 0.0031205549801702607,
+      "excess": -0.0011858170628599697,
+      "t_excess": -0.5067676096654832
+    },
+    {
+      "source": "wiki",
+      "timing": "hold10",
+      "role": "exploratory",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 10,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.36750483558994196,
+      "sharpe": 0.4056607560991279,
+      "cagr": 0.04226245436158216,
+      "maxdd": -0.2334230865203547,
+      "equity_end": 1.5290013975099799,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 95,
+      "hit_rate": 0.6526315789473685,
+      "mean_trade": 0.005821452612385758,
+      "mean_uncond": 0.006174655815275817,
+      "excess": -0.00035320320289005877,
+      "t_excess": -0.13246108674002938
+    },
+    {
+      "source": "news",
+      "timing": "cost0",
+      "role": "cost_sensitivity",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0,
+      "n_days": 4220,
+      "exposure": 0.08483412322274882,
+      "sharpe": 0.28526666293308395,
+      "cagr": 0.016541296090442525,
+      "maxdd": -0.20552374062892154,
+      "equity_end": 1.316181900479813,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 179,
+      "hit_rate": 0.6201117318435754,
+      "mean_trade": 0.0017291272362315493,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.0005720552410004493,
+      "t_excess": 0.39279947615486444
+    },
+    {
+      "source": "wiki",
+      "timing": "cost0",
+      "role": "cost_sensitivity",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0,
+      "n_days": 2585,
+      "exposure": 0.12611218568665378,
+      "sharpe": 0.13124297671831264,
+      "cagr": 0.006991417399107469,
+      "maxdd": -0.2712837203940581,
+      "equity_end": 1.0740837522520805,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 163,
+      "hit_rate": 0.6196319018404908,
+      "mean_trade": 0.0006007240271928067,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.0006521401029457053,
+      "t_excess": -0.47117931209661423
+    },
+    {
+      "source": "news",
+      "timing": "cost10bp_side",
+      "role": "cost_sensitivity",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.001,
+      "n_days": 4220,
+      "exposure": 0.08483412322274882,
+      "sharpe": -0.04407362831626261,
+      "cagr": -0.004952849250076219,
+      "maxdd": -0.23900729317178349,
+      "equity_end": 0.9202161898535048,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 179,
+      "hit_rate": 0.6201117318435754,
+      "mean_trade": 0.0017291272362315493,
+      "mean_uncond": 0.0011570719952311,
+      "excess": 0.0005720552410004493,
+      "t_excess": 0.39279947615486444
+    },
+    {
+      "source": "wiki",
+      "timing": "cost10bp_side",
+      "role": "cost_sensitivity",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.001,
+      "n_days": 2585,
+      "exposure": 0.12611218568665378,
+      "sharpe": -0.2900147883651798,
+      "cagr": -0.024522612758319573,
+      "maxdd": -0.2789139044212585,
+      "equity_end": 0.7751589889047378,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 163,
+      "hit_rate": 0.6196319018404908,
+      "mean_trade": 0.0006007240271928067,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.0006521401029457053,
+      "t_excess": -0.47117931209661423
+    },
+    {
+      "source": "news",
+      "timing": "fast_kill_switch",
+      "role": "overlay",
+      "shock_z": 1.5,
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 4220,
+      "exposure": 0.07582938388625593,
+      "sharpe": -0.02494101859340659,
+      "cagr": -0.00309214432707805,
+      "maxdd": -0.2242556462066524,
+      "equity_end": 0.9494604815488527,
+      "buyhold_sharpe": 0.870158867870215,
+      "buyhold_cagr": 0.14300975746704503,
+      "buyhold_maxdd": -0.3371726713072689,
+      "null_p": null,
+      "n_trades": 160,
+      "hit_rate": 0.6125,
+      "mean_trade": 0.0008533729250405277,
+      "mean_uncond": 0.0011570719952311,
+      "excess": -0.00030369907019057226,
+      "t_excess": -0.20750301592952392
+    },
+    {
+      "source": "wiki",
+      "timing": "fast_kill_switch",
+      "role": "overlay",
+      "shock_z": 1.5,
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "cost_per_side": 0.0005,
+      "n_days": 2585,
+      "exposure": 0.059574468085106386,
+      "sharpe": -0.2829173994772407,
+      "cagr": -0.014724444851710539,
+      "maxdd": -0.18536793282514208,
+      "equity_end": 0.8588461590743609,
+      "buyhold_sharpe": 0.8987173573554773,
+      "buyhold_cagr": 0.15464053521892906,
+      "buyhold_maxdd": -0.33717267130726924,
+      "null_p": null,
+      "n_trades": 77,
+      "hit_rate": 0.6493506493506493,
+      "mean_trade": -0.0007485535468311614,
+      "mean_uncond": 0.001252864130138512,
+      "excess": -0.002001417676969673,
+      "t_excess": -0.844456034823068
+    }
+  ],
+  "regressions": [
+    {
+      "name": "wiki_fast_common",
+      "series": "wiki",
+      "start": "2016-07-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "n": 2582,
+      "params": {
+        "const": 0.0012848750013144997,
+        "deterioration": -0.0006946502903133836,
+        "spy_ret": -0.048888791799183304
+      },
+      "tvalues": {
+        "const": 3.344748270292954,
+        "deterioration": -1.7418425022199868,
+        "spy_ret": -1.2636524797189777
+      },
+      "pvalues": {
+        "const": 0.0008235728258247452,
+        "deterioration": 0.08153600728582579,
+        "spy_ret": 0.20635478837412158
+      }
+    },
+    {
+      "name": "news_fast_post_letter",
+      "series": "news",
+      "start": "2020-04-07",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "n": 1636,
+      "params": {
+        "const": 0.0015518027350017094,
+        "deterioration": 0.00019680668079914533,
+        "spy_ret": -0.04133199858127658
+      },
+      "tvalues": {
+        "const": 3.215667569104137,
+        "deterioration": 0.5640212966838217,
+        "spy_ret": -0.905676754844172
+      },
+      "pvalues": {
+        "const": 0.0013014149088812373,
+        "deterioration": 0.5727396385591332,
+        "spy_ret": 0.3651069695364808
+      }
+    },
+    {
+      "name": "news_slow_post_letter",
+      "series": "news",
+      "start": "2020-04-07",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 1,
+      "n": 1635,
+      "params": {
+        "const": 0.0015286799817426462,
+        "deterioration": -1.350761781055416e-05,
+        "spy_ret": -0.054345246348447764
+      },
+      "tvalues": {
+        "const": 3.243812896537331,
+        "deterioration": -0.03676556398946319,
+        "spy_ret": -1.213967763100427
+      },
+      "pvalues": {
+        "const": 0.001179411918731297,
+        "deterioration": 0.9706719314301689,
+        "spy_ret": 0.22476003452523863
+      }
+    },
+    {
+      "name": "news_fast_from_2010",
+      "series": "news",
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "n": 4218,
+      "params": {
+        "const": 0.0011793672760007166,
+        "deterioration": 0.00018112291237071593,
+        "spy_ret": -0.03968320129377653
+      },
+      "tvalues": {
+        "const": 4.024595451884527,
+        "deterioration": 0.7496840344431532,
+        "spy_ret": -1.2956715315625307
+      },
+      "pvalues": {
+        "const": 5.7073341833235946e-05,
+        "deterioration": 0.4534450254130955,
+        "spy_ret": 0.19508867335287794
+      }
+    },
+    {
+      "name": "vix_fast_from_2010",
+      "series": "vix",
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "n": 4218,
+      "params": {
+        "const": 0.0012096524574011817,
+        "deterioration": -0.0004315573145574108,
+        "spy_ret": -0.07434035206312388
+      },
+      "tvalues": {
+        "const": 4.106121142761365,
+        "deterioration": -1.0175164035205502,
+        "spy_ret": -1.6141621006689237
+      },
+      "pvalues": {
+        "const": 4.023585224355267e-05,
+        "deterioration": 0.30890783289859014,
+        "spy_ret": 0.10649227021358909
+      }
+    },
+    {
+      "name": "price_fast_from_2010",
+      "series": "price",
+      "start": "2010-01-01",
+      "end": "2026-10-13",
+      "hold": 2,
+      "delay": 0,
+      "n": 4218,
+      "params": {
+        "const": 0.0012301557564102592,
+        "deterioration": -0.0007012957478818383,
+        "spy_ret": -0.10717227482438266
+      },
+      "tvalues": {
+        "const": 4.22809168183416,
+        "deterioration": -0.7634413868109381,
+        "spy_ret": -1.1175568078146427
+      },
+      "pvalues": {
+        "const": 2.356817594816653e-05,
+        "deterioration": 0.44520020556049267,
+        "spy_ret": 0.26375632456819775
+      }
+    }
+  ],
+  "events": {
+    "n_events": 70,
+    "n_panic": 46,
+    "n_euphoria": 17,
+    "n_mixed": 7,
+    "panic_2d": {
+      "raw": {
+        "n": 46,
+        "mean": -0.009285098150257316,
+        "t": -2.234526044374423,
+        "hit": 0.41304347826086957
+      },
+      "clustered": {
+        "n": 24,
+        "mean": -0.005453317617716519,
+        "t": -1.331847390343973,
+        "hit": 0.3333333333333333
+      }
+    },
+    "panic_10d": {
+      "raw": {
+        "n": 46,
+        "mean": -0.003982745156019743,
+        "t": -0.41858101025941274,
+        "hit": 0.4782608695652174
+      },
+      "clustered": {
+        "n": 24,
+        "mean": 0.0022619138580509553,
+        "t": 0.2121522070472094,
+        "hit": 0.4166666666666667
+      }
+    },
+    "panic_same_day": {
+      "raw": {
+        "n": 46,
+        "mean": -0.03513081139257058,
+        "t": -8.17253950619903,
+        "hit": 0.043478260869565216
+      },
+      "clustered": {
+        "n": 24,
+        "mean": -0.03312381226233902,
+        "t": -6.376562672130626,
+        "hit": 0.041666666666666664
+      }
+    },
+    "euphoria_1d": {
+      "raw": {
+        "n": 17,
+        "mean": 0.007324260222949075,
+        "t": 0.9033856495249059,
+        "hit": 0.8235294117647058
+      },
+      "clustered": {
+        "n": 17,
+        "mean": 0.007324260222949075,
+        "t": 0.9033856495249059,
+        "hit": 0.8235294117647058
+      }
+    },
+    "euphoria_5d": {
+      "raw": {
+        "n": 17,
+        "mean": 0.015960867604390847,
+        "t": 1.122150882200213,
+        "hit": 0.6470588235294118
+      },
+      "clustered": {
+        "n": 17,
+        "mean": 0.015960867604390847,
+        "t": 1.122150882200213,
+        "hit": 0.6470588235294118
+      }
+    },
+    "euphoria_same_day": {
+      "raw": {
+        "n": 17,
+        "mean": 0.04074329978754407,
+        "t": 2.5417113836188134,
+        "hit": 0.8235294117647058
+      },
+      "clustered": {
+        "n": 17,
+        "mean": 0.04074329978754407,
+        "t": 2.5417113836188134,
+        "hit": 0.8235294117647058
+      }
+    },
+    "cascade_2d": {
+      "raw": {
+        "n": 10,
+        "mean": -0.0028318198287148877,
+        "t": -0.2591295822443234,
+        "hit": 0.7
+      },
+      "clustered": {
+        "n": 7,
+        "mean": 0.003803080098209871,
+        "t": 0.27106165338946364,
+        "hit": 0.7142857142857143
+      }
+    },
+    "policy_2d": {
+      "raw": {
+        "n": 36,
+        "mean": -0.011077675461796879,
+        "t": -2.5141799700177367,
+        "hit": 0.3333333333333333
+      },
+      "clustered": {
+        "n": 23,
+        "mean": -0.008445420835858187,
+        "t": -1.9748157340086039,
+        "hit": 0.2608695652173913
+      }
+    }
+  },
+  "ml": {
+    "base_rate": 0.5486690504568932,
+    "n_train": 2517,
+    "n_val": 1259,
+    "n_test": 4218,
+    "models": {
+      "logistic": {
+        "val": {
+          "sharpe": -0.21434233264665906,
+          "cagr": -0.053991903481805936,
+          "n_trades": 302,
+          "excess": 5.974630758713708e-05,
+          "t_excess": 0.04743867229002299,
+          "hit_rate": 0.5099337748344371,
+          "exposure": 0.4797458300238284
+        },
+        "test": {
+          "sharpe": -0.15624866079930425,
+          "cagr": -0.024355782143296145,
+          "n_trades": 918,
+          "excess": -0.0004976025250283759,
+          "t_excess": -1.02279276123911,
+          "hit_rate": 0.5806100217864923,
+          "exposure": 0.43507109004739336
+        },
+        "n_iter": 3
+      },
+      "mlp": {
+        "val": {
+          "sharpe": 0.0888435562791705,
+          "cagr": 5.549382893477173e-05,
+          "n_trades": 353,
+          "excess": 0.0009459949047492358,
+          "t_excess": 0.8746858631766546,
+          "hit_rate": 0.5410764872521246,
+          "exposure": 0.5607625099285147
+        },
+        "test": {
+          "sharpe": 0.11287847090842718,
+          "cagr": 0.00634731087257423,
+          "n_trades": 1098,
+          "excess": 4.030197808725265e-05,
+          "t_excess": 0.09439192791761467,
+          "hit_rate": 0.5947176684881603,
+          "exposure": 0.5203791469194313
+        },
+        "n_iter": 74
+      }
+    },
+    "rule_val_sharpe": 0.18131386467207317,
+    "rule_test": {
+      "sharpe": 0.12083578788513062,
+      "excess": 0.0005720552410004493,
+      "t_excess": 0.39279947615486444,
+      "n_trades": 179
+    },
+    "note": "对照模型不替换生产规则。验证段夏普只用来描述，不用来改阈值。"
+  },
+  "scores": [
+    {
+      "asof": "2018-12-24",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "恶化冲击 z=-0.48，没有达到事先注册的 1.5，不做多。",
+      "sources": {
+        "news": {
+          "asof": "2018-12-24",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -0.48372154930644023,
+          "raw_shock_z": 0.48372154930644023,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5964718039563035,
+          "historical_probability_interval_95": [
+            0.5076989862975403,
+            0.6821978167423048
+          ],
+          "unconditional_hit_rate": 0.5788308237378211,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0003273774183171846,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 100,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 110,
+              "mean_excess_return": 0.0014974840391838874,
+              "hit_rate": 0.6181818181818182,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 100,
+              "mean_excess_return": 0.0003273774183171846,
+              "hit_rate": 0.6,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 91,
+              "mean_excess_return": 0.003865591288475173,
+              "hit_rate": 0.6813186813186813,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 87,
+              "mean_excess_return": 0.004639138051901619,
+              "hit_rate": 0.6781609195402298,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 69,
+              "mean_excess_return": 0.0033221168130306332,
+              "hit_rate": 0.7391304347826086,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 52,
+              "mean_excess_return": 0.0006659127695345778,
+              "hit_rate": 0.6153846153846154,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-0.48，没有达到事先注册的 1.5，不做多。"
+        },
+        "wiki": {
+          "asof": "2018-12-24",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -2.2055261926650327,
+          "raw_shock_z": -2.2055261926650327,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6278469480716672,
+          "historical_probability_interval_95": [
+            0.5155318874967781,
+            0.7336142644319876
+          ],
+          "unconditional_hit_rate": 0.5730337078651685,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0003109675600958885,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 54,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 55,
+              "mean_excess_return": 0.00042064349952640045,
+              "hit_rate": 0.5636363636363636,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 54,
+              "mean_excess_return": 0.0003109675600958885,
+              "hit_rate": 0.6481481481481481,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 52,
+              "mean_excess_return": -0.0020886399033427086,
+              "hit_rate": 0.6538461538461539,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 34,
+              "mean_excess_return": -0.0008072926122946087,
+              "hit_rate": 0.6764705882352942,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 29,
+              "mean_excess_return": 0.0005722393178231324,
+              "hit_rate": 0.7241379310344828,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 19,
+              "mean_excess_return": 0.0021296496078615917,
+              "hit_rate": 0.7368421052631579,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-2.21，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2018-12-24",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.05510931735173812,
+          "deterioration_z": 2.8462861304380396,
+          "raw_shock_z": 2.8462861304380396,
+          "signal": 1,
+          "probability_up": 0.5308329006444519,
+          "probability_interval_95": [
+            0.44007044737093376,
+            0.6205879014088456
+          ],
+          "historical_probability_up": 0.5308329006444519,
+          "historical_probability_interval_95": [
+            0.44007044737093376,
+            0.6205879014088456
+          ],
+          "unconditional_hit_rate": 0.5788308237378211,
+          "expected_horizon_return": 0.0014505168153372838,
+          "expected_excess_return": 0.0005510931735173812,
+          "expected_excess_return_net": -0.0004489068264826188,
+          "unshrunk_excess_return": 0.0007233097902415627,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 96,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 108,
+              "mean_excess_return": 0.0005193593541595053,
+              "hit_rate": 0.5370370370370371,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 96,
+              "mean_excess_return": 0.0007233097902415627,
+              "hit_rate": 0.5208333333333334,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 85,
+              "mean_excess_return": 0.0036283613320005482,
+              "hit_rate": 0.6470588235294118,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 82,
+              "mean_excess_return": 0.0047426133442766945,
+              "hit_rate": 0.6219512195121951,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 61,
+              "mean_excess_return": 0.0023597459824461486,
+              "hit_rate": 0.639344262295082,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 47,
+              "mean_excess_return": 0.0016353763098181078,
+              "hit_rate": 0.6808510638297872,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=2.85。按冻结的两日逆向规则做多，收缩后的毛超额约 5.5 bp，扣除事先注册的 10 bp 往返后约 -4.5 bp，上涨概率 53.1%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        },
+        "price": {
+          "asof": "2018-12-24",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.06752480211240991,
+          "deterioration_z": 2.5974020054996063,
+          "raw_shock_z": -2.5974020054996063,
+          "signal": 1,
+          "probability_up": 0.5469758319625458,
+          "probability_interval_95": [
+            0.4643029309816297,
+            0.6283770416731811
+          ],
+          "historical_probability_up": 0.5469758319625458,
+          "historical_probability_interval_95": [
+            0.4643029309816297,
+            0.6283770416731811
+          ],
+          "unconditional_hit_rate": 0.5788308237378211,
+          "expected_horizon_return": 0.0015746716629440017,
+          "expected_excess_return": 0.0006752480211240991,
+          "expected_excess_return_net": -0.0003247519788759009,
+          "unshrunk_excess_return": 0.0008440600264051241,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 120,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 135,
+              "mean_excess_return": -0.00037235140796260054,
+              "hit_rate": 0.5481481481481482,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 120,
+              "mean_excess_return": 0.0008440600264051241,
+              "hit_rate": 0.5416666666666666,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 97,
+              "mean_excess_return": -0.0011405473845151341,
+              "hit_rate": 0.5773195876288659,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 92,
+              "mean_excess_return": 0.0001723736303541521,
+              "hit_rate": 0.5543478260869565,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 72,
+              "mean_excess_return": 0.004213681343653596,
+              "hit_rate": 0.6944444444444444,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 49,
+              "mean_excess_return": 0.004238204344079831,
+              "hit_rate": 0.7142857142857143,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=2.60。按冻结的两日逆向规则做多，收缩后的毛超额约 6.8 bp，扣除事先注册的 10 bp 往返后约 -3.2 bp，上涨概率 54.7%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2020-03-16",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "恶化冲击 z=1.64 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。",
+      "sources": {
+        "news": {
+          "asof": "2020-03-16",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "killed_no_edge",
+          "bullish_score": 0.0,
+          "deterioration_z": 1.6436214346041949,
+          "raw_shock_z": -1.6436214346041949,
+          "signal": 1,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6096035452339882,
+          "historical_probability_interval_95": [
+            0.527434706638084,
+            0.6887841971556409
+          ],
+          "unconditional_hit_rate": 0.5867446393762183,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0002967551659904265,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 119,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 129,
+              "mean_excess_return": 0.001793639934962821,
+              "hit_rate": 0.6201550387596899,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 119,
+              "mean_excess_return": -0.0002967551659904265,
+              "hit_rate": 0.6134453781512605,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 106,
+              "mean_excess_return": 0.0026360662175787166,
+              "hit_rate": 0.6792452830188679,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 100,
+              "mean_excess_return": 0.00509050571256461,
+              "hit_rate": 0.68,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 80,
+              "mean_excess_return": 0.0014235256296494568,
+              "hit_rate": 0.7,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 59,
+              "mean_excess_return": 0.0022114524139479584,
+              "hit_rate": 0.6271186440677966,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=1.64 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。"
+        },
+        "wiki": {
+          "asof": "2020-03-16",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -3.5291608716800322,
+          "raw_shock_z": -3.5291608716800322,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6458129683936136,
+          "historical_probability_interval_95": [
+            0.5495178161897609,
+            0.736526769986205
+          ],
+          "unconditional_hit_rate": 0.5967741935483871,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0009196340357428524,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 79,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 81,
+              "mean_excess_return": -0.0011306794885673898,
+              "hit_rate": 0.5432098765432098,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 79,
+              "mean_excess_return": -0.0009196340357428524,
+              "hit_rate": 0.6582278481012658,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 77,
+              "mean_excess_return": -0.002107487331983834,
+              "hit_rate": 0.6493506493506493,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 54,
+              "mean_excess_return": 0.0010732982733352436,
+              "hit_rate": 0.7037037037037037,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 44,
+              "mean_excess_return": 0.0023845097496479964,
+              "hit_rate": 0.7727272727272727,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 28,
+              "mean_excess_return": 0.004484618787902406,
+              "hit_rate": 0.7857142857142857,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-3.53，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2020-03-16",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.08616385615810189,
+          "deterioration_z": 9.264766358353869,
+          "raw_shock_z": 9.264766358353869,
+          "signal": 1,
+          "probability_up": 0.5468788931392808,
+          "probability_interval_95": [
+            0.46206384331303246,
+            0.6303580609869788
+          ],
+          "historical_probability_up": 0.5468788931392808,
+          "historical_probability_interval_95": [
+            0.46206384331303246,
+            0.6303580609869788
+          ],
+          "unconditional_hit_rate": 0.5867446393762183,
+          "expected_horizon_return": 0.0017378272018487107,
+          "expected_excess_return": 0.0008616385615810188,
+          "expected_excess_return_net": -0.00013836143841898117,
+          "unshrunk_excess_return": 0.0010903921620007587,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 113,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 127,
+              "mean_excess_return": 0.0006644351232066475,
+              "hit_rate": 0.5354330708661418,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 113,
+              "mean_excess_return": 0.0010903921620007587,
+              "hit_rate": 0.5398230088495575,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 97,
+              "mean_excess_return": 0.002175801300930512,
+              "hit_rate": 0.6391752577319587,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 92,
+              "mean_excess_return": 0.0037718689998047943,
+              "hit_rate": 0.6195652173913043,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 69,
+              "mean_excess_return": 0.0017750069618640806,
+              "hit_rate": 0.6376811594202898,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 53,
+              "mean_excess_return": 0.0019863126033008924,
+              "hit_rate": 0.660377358490566,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=9.26。按冻结的两日逆向规则做多，收缩后的毛超额约 8.6 bp，扣除事先注册的 10 bp 往返后约 -1.4 bp，上涨概率 54.7%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        },
+        "price": {
+          "asof": "2020-03-16",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.15941670684381254,
+          "deterioration_z": 7.64535807907791,
+          "raw_shock_z": -7.64535807907791,
+          "signal": 1,
+          "probability_up": 0.5688134153046434,
+          "probability_interval_95": [
+            0.4906200327041551,
+            0.6453350872896013
+          ],
+          "historical_probability_up": 0.5688134153046434,
+          "historical_probability_interval_95": [
+            0.4906200327041551,
+            0.6453350872896013
+          ],
+          "unconditional_hit_rate": 0.5867446393762183,
+          "expected_horizon_return": 0.002470355708705817,
+          "expected_excess_return": 0.0015941670684381255,
+          "expected_excess_return_net": 0.0005941670684381254,
+          "unshrunk_excess_return": 0.001945821568828888,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 136,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 151,
+              "mean_excess_return": -8.366374513391284e-05,
+              "hit_rate": 0.5562913907284768,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 136,
+              "mean_excess_return": 0.001945821568828888,
+              "hit_rate": 0.5661764705882353,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 108,
+              "mean_excess_return": -0.0014191181266680049,
+              "hit_rate": 0.5833333333333334,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 103,
+              "mean_excess_return": 0.001198937954227491,
+              "hit_rate": 0.5728155339805825,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 80,
+              "mean_excess_return": 0.00409799098086232,
+              "hit_rate": 0.7,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 55,
+              "mean_excess_return": 0.003857565109541357,
+              "hit_rate": 0.7090909090909091,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=7.65。按冻结的两日逆向规则做多，收缩后的毛超额约 15.9 bp，扣除事先注册的 10 bp 往返后约 5.9 bp，上涨概率 56.9%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2020-03-23",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "恶化冲击 z=2.68 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。",
+      "sources": {
+        "news": {
+          "asof": "2020-03-23",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "killed_no_edge",
+          "bullish_score": 0.0,
+          "deterioration_z": 2.6808526328144935,
+          "raw_shock_z": -2.6808526328144935,
+          "signal": 1,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6122846025569761,
+          "historical_probability_interval_95": [
+            0.530476840130166,
+            0.6910529710814565
+          ],
+          "unconditional_hit_rate": 0.5859922178988327,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0002098602315854409,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 120,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 130,
+              "mean_excess_return": 0.002217312399214683,
+              "hit_rate": 0.6230769230769231,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 120,
+              "mean_excess_return": -0.0002098602315854409,
+              "hit_rate": 0.6166666666666667,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 106,
+              "mean_excess_return": 0.002784217129366863,
+              "hit_rate": 0.6792452830188679,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 101,
+              "mean_excess_return": 0.003990248902755121,
+              "hit_rate": 0.6732673267326733,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 80,
+              "mean_excess_return": 0.001824638176377508,
+              "hit_rate": 0.7,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 59,
+              "mean_excess_return": 0.002795468973855582,
+              "hit_rate": 0.6271186440677966,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=2.68 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。"
+        },
+        "wiki": {
+          "asof": "2020-03-23",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -1.7594950123166793,
+          "raw_shock_z": -1.7594950123166793,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6389304812834224,
+          "historical_probability_interval_95": [
+            0.5428545356082058,
+            0.7297415605770372
+          ],
+          "unconditional_hit_rate": 0.5946524064171123,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0014464181170399193,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 80,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 82,
+              "mean_excess_return": -0.0016687395457397629,
+              "hit_rate": 0.5365853658536586,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 80,
+              "mean_excess_return": -0.0014464181170399193,
+              "hit_rate": 0.65,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 78,
+              "mean_excess_return": -0.0031396878610956045,
+              "hit_rate": 0.6410256410256411,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 55,
+              "mean_excess_return": -0.0006892142718097955,
+              "hit_rate": 0.6909090909090909,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 44,
+              "mean_excess_return": 0.003490004891806005,
+              "hit_rate": 0.7727272727272727,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 28,
+              "mean_excess_return": 0.006107006020247942,
+              "hit_rate": 0.7857142857142857,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-1.76，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2020-03-23",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -1.4767003004217856,
+          "raw_shock_z": -1.4767003004217856,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5467657470524561,
+          "historical_probability_interval_95": [
+            0.4619505008820889,
+            0.6302483353784174
+          ],
+          "unconditional_hit_rate": 0.5859922178988327,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.001176902603772394,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 113,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 128,
+              "mean_excess_return": 0.001103152581032877,
+              "hit_rate": 0.5390625,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 113,
+              "mean_excess_return": 0.001176902603772394,
+              "hit_rate": 0.5398230088495575,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 98,
+              "mean_excess_return": 0.0014818128489168638,
+              "hit_rate": 0.6326530612244898,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 93,
+              "mean_excess_return": 0.002555685667042215,
+              "hit_rate": 0.6129032258064516,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 69,
+              "mean_excess_return": 0.0021761195085921317,
+              "hit_rate": 0.6376811594202898,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 53,
+              "mean_excess_return": 0.002570329163208516,
+              "hit_rate": 0.660377358490566,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-1.48，没有达到事先注册的 1.5，不做多。"
+        },
+        "price": {
+          "asof": "2020-03-23",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 1.4876226418169236,
+          "raw_shock_z": -1.4876226418169236,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.571463976802399,
+          "historical_probability_interval_95": [
+            0.4935471554652756,
+            0.6476557623503899
+          ],
+          "unconditional_hit_rate": 0.5859922178988327,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.002016299619222295,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 137,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 154,
+              "mean_excess_return": 0.00013349765698197913,
+              "hit_rate": 0.5584415584415584,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 137,
+              "mean_excess_return": 0.002016299619222295,
+              "hit_rate": 0.5693430656934306,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 109,
+              "mean_excess_return": -0.001995139125200752,
+              "hit_rate": 0.5779816513761468,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 104,
+              "mean_excess_return": 0.00015677491267308353,
+              "hit_rate": 0.5673076923076923,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 80,
+              "mean_excess_return": 0.0044991035275903715,
+              "hit_rate": 0.7,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 55,
+              "mean_excess_return": 0.004441581669448981,
+              "hit_rate": 0.7090909090909091,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=1.49，没有达到事先注册的 1.5，不做多。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2024-08-05",
+      "recommended": 1,
+      "stance": "long",
+      "primary_source": "news",
+      "bullish_score": 0.06399301873506474,
+      "probability_up": 0.6208776233306078,
+      "probability_interval_95": [
+        0.5490165595754628,
+        0.6901939678505311
+      ],
+      "expected_excess_return": 0.0006399301873506475,
+      "expected_horizon_return": 0.0017274831151983677,
+      "hold_trading_days": 2,
+      "policy_hold_trading_days": 2,
+      "agreement": "news_only",
+      "rationale": "恶化冲击 z=4.70。按冻结的两日逆向规则做多，收缩后的毛超额约 6.4 bp，扣除事先注册的 10 bp 往返后约 -3.6 bp，上涨概率 62.1%。概率是以往不重叠交易的命中率，不是模型当场的信心。",
+      "sources": {
+        "news": {
+          "asof": "2024-08-05",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.06399301873506474,
+          "deterioration_z": 4.698865242199997,
+          "raw_shock_z": -4.698865242199997,
+          "signal": 1,
+          "probability_up": 0.6208776233306078,
+          "probability_interval_95": [
+            0.5490165595754628,
+            0.6901939678505311
+          ],
+          "historical_probability_up": 0.6208776233306078,
+          "historical_probability_interval_95": [
+            0.5490165595754628,
+            0.6901939678505311
+          ],
+          "unconditional_hit_rate": 0.5878986099754702,
+          "expected_horizon_return": 0.0017274831151983677,
+          "expected_excess_return": 0.0006399301873506475,
+          "expected_excess_return_net": -0.0003600698126493525,
+          "unshrunk_excess_return": 0.0007599170974788938,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 160,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 172,
+              "mean_excess_return": 0.0020867182369251605,
+              "hit_rate": 0.5930232558139535,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 160,
+              "mean_excess_return": 0.0007599170974788938,
+              "hit_rate": 0.625,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 141,
+              "mean_excess_return": 0.0025551343627197667,
+              "hit_rate": 0.6808510638297872,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 134,
+              "mean_excess_return": 0.003810434543267908,
+              "hit_rate": 0.664179104477612,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 109,
+              "mean_excess_return": 0.0025065796398543,
+              "hit_rate": 0.6972477064220184,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 84,
+              "mean_excess_return": 0.0007857858496284828,
+              "hit_rate": 0.6428571428571429,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=4.70。按冻结的两日逆向规则做多，收缩后的毛超额约 6.4 bp，扣除事先注册的 10 bp 往返后约 -3.6 bp，上涨概率 62.1%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        },
+        "wiki": {
+          "asof": "2024-08-05",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.14838462058742452,
+          "raw_shock_z": 0.14838462058742452,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6265898034074331,
+          "historical_probability_interval_95": [
+            0.5487442611542848,
+            0.7013000313731874
+          ],
+          "unconditional_hit_rate": 0.5934119960668633,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.00046448617922941826,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 133,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 136,
+              "mean_excess_return": -0.0009975727909981166,
+              "hit_rate": 0.5147058823529411,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 133,
+              "mean_excess_return": -0.00046448617922941826,
+              "hit_rate": 0.631578947368421,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 127,
+              "mean_excess_return": -0.0013588682566020717,
+              "hit_rate": 0.6929133858267716,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 95,
+              "mean_excess_return": 0.0003821334997274931,
+              "hit_rate": 0.7157894736842105,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 77,
+              "mean_excess_return": 0.0005256200631553291,
+              "hit_rate": 0.7142857142857143,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 56,
+              "mean_excess_return": 0.0012008569285862046,
+              "hit_rate": 0.75,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.15，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2024-08-05",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "killed_no_edge",
+          "bullish_score": 0.0,
+          "deterioration_z": 17.09637748378833,
+          "raw_shock_z": 17.09637748378833,
+          "signal": 1,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5405473307235161,
+          "historical_probability_interval_95": [
+            0.4674027161313228,
+            0.6128334941939082
+          ],
+          "unconditional_hit_rate": 0.5878986099754702,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.00018353499077379564,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 159,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 177,
+              "mean_excess_return": 0.0002777736858783164,
+              "hit_rate": 0.519774011299435,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 159,
+              "mean_excess_return": -0.00018353499077379564,
+              "hit_rate": 0.5345911949685535,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 136,
+              "mean_excess_return": 0.00025001923708229887,
+              "hit_rate": 0.5955882352941176,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 128,
+              "mean_excess_return": 0.0002568035289889992,
+              "hit_rate": 0.5859375,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 100,
+              "mean_excess_return": -0.0010297911483789614,
+              "hit_rate": 0.59,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 75,
+              "mean_excess_return": -0.001070439326653825,
+              "hit_rate": 0.6533333333333333,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=17.10 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。"
+        },
+        "price": {
+          "asof": "2024-08-05",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.12238963166204535,
+          "deterioration_z": 4.025823444427004,
+          "raw_shock_z": -4.025823444427004,
+          "signal": 1,
+          "probability_up": 0.5702760580929019,
+          "probability_interval_95": [
+            0.5029168103216579,
+            0.636367160363664
+          ],
+          "historical_probability_up": 0.5702760580929019,
+          "historical_probability_interval_95": [
+            0.5029168103216579,
+            0.636367160363664
+          ],
+          "unconditional_hit_rate": 0.5878986099754702,
+          "expected_horizon_return": 0.0023114492444681737,
+          "expected_excess_return": 0.0012238963166204535,
+          "expected_excess_return_net": 0.0002238963166204535,
+          "unshrunk_excess_return": 0.001417143103455262,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 190,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 211,
+              "mean_excess_return": 0.0001766777462203471,
+              "hit_rate": 0.5450236966824644,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 190,
+              "mean_excess_return": 0.001417143103455262,
+              "hit_rate": 0.5684210526315789,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 153,
+              "mean_excess_return": -0.0018062051920579533,
+              "hit_rate": 0.5751633986928104,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 145,
+              "mean_excess_return": 0.0009580991431812152,
+              "hit_rate": 0.5655172413793104,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 112,
+              "mean_excess_return": 0.0015386237921476038,
+              "hit_rate": 0.625,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 77,
+              "mean_excess_return": 0.0013247271411067022,
+              "hit_rate": 0.6623376623376623,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=4.03。按冻结的两日逆向规则做多，收缩后的毛超额约 12.2 bp，扣除事先注册的 10 bp 往返后约 2.2 bp，上涨概率 57.0%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2025-01-27",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "恶化冲击 z=0.53，没有达到事先注册的 1.5，不做多。",
+      "sources": {
+        "news": {
+          "asof": "2025-01-27",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.5257773277257296,
+          "raw_shock_z": -0.5257773277257296,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6192535956496451,
+          "historical_probability_interval_95": [
+            0.5487222401910857,
+            0.6873684068829609
+          ],
+          "unconditional_hit_rate": 0.5900211193241817,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0005350434139787591,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 167,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 179,
+              "mean_excess_return": 0.002097782055962852,
+              "hit_rate": 0.5977653631284916,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 167,
+              "mean_excess_return": 0.0005350434139787591,
+              "hit_rate": 0.6227544910179641,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 148,
+              "mean_excess_return": 0.0022374523425783012,
+              "hit_rate": 0.6621621621621622,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 139,
+              "mean_excess_return": 0.0037910751134497952,
+              "hit_rate": 0.6690647482014388,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 114,
+              "mean_excess_return": 0.0029607404239873616,
+              "hit_rate": 0.7017543859649122,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 88,
+              "mean_excess_return": 0.002076885598566801,
+              "hit_rate": 0.6590909090909091,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.53，没有达到事先注册的 1.5，不做多。"
+        },
+        "wiki": {
+          "asof": "2025-01-27",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -2.097562134306323,
+          "raw_shock_z": -2.097562134306323,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6342104636345232,
+          "historical_probability_interval_95": [
+            0.5573556286161068,
+            0.7078052311917334
+          ],
+          "unconditional_hit_rate": 0.5968416163492801,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.00024428525891307556,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 136,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 139,
+              "mean_excess_return": -0.0010528185737487318,
+              "hit_rate": 0.5179856115107914,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 136,
+              "mean_excess_return": -0.00024428525891307556,
+              "hit_rate": 0.6397058823529411,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 130,
+              "mean_excess_return": -0.000994898937119314,
+              "hit_rate": 0.7,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 97,
+              "mean_excess_return": 0.000744303500163212,
+              "hit_rate": 0.7216494845360825,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 79,
+              "mean_excess_return": 0.0014353136104253827,
+              "hit_rate": 0.7215189873417721,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 58,
+              "mean_excess_return": 0.0014260188281743896,
+              "hit_rate": 0.7413793103448276,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-2.10，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2025-01-27",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "killed_no_edge",
+          "bullish_score": 0.0,
+          "deterioration_z": 1.6384299362137211,
+          "raw_shock_z": 1.6384299362137211,
+          "signal": 1,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5448671480350467,
+          "historical_probability_interval_95": [
+            0.47292518951633306,
+            0.6158900159784892
+          ],
+          "unconditional_hit_rate": 0.5900211193241817,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -1.9635233633167335e-05,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 165,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 184,
+              "mean_excess_return": 0.00039674803347861413,
+              "hit_rate": 0.5271739130434783,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 165,
+              "mean_excess_return": -1.9635233633167335e-05,
+              "hit_rate": 0.5393939393939394,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 141,
+              "mean_excess_return": 0.00017442946727960502,
+              "hit_rate": 0.5886524822695035,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 133,
+              "mean_excess_return": 0.00047684764685316464,
+              "hit_rate": 0.5864661654135338,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 105,
+              "mean_excess_return": -0.00026809361324953325,
+              "hit_rate": 0.6095238095238096,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 79,
+              "mean_excess_return": -0.0011218614346348871,
+              "hit_rate": 0.6582278481012658,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=1.64 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。"
+        },
+        "price": {
+          "asof": "2025-01-27",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.11694954056699954,
+          "deterioration_z": 1.8820590588842616,
+          "raw_shock_z": -1.8820590588842616,
+          "signal": 1,
+          "probability_up": 0.5705088589238877,
+          "probability_interval_95": [
+            0.504250218798817,
+            0.635536204735798
+          ],
+          "historical_probability_up": 0.5705088589238877,
+          "historical_probability_interval_95": [
+            0.504250218798817,
+            0.635536204735798
+          ],
+          "unconditional_hit_rate": 0.5900211193241817,
+          "expected_horizon_return": 0.002302256499442523,
+          "expected_excess_return": 0.0011694954056699954,
+          "expected_excess_return_net": 0.0001694954056699954,
+          "unshrunk_excess_return": 0.0013475911527263398,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 197,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 220,
+              "mean_excess_return": 0.0002396940962099953,
+              "hit_rate": 0.55,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 197,
+              "mean_excess_return": 0.0013475911527263398,
+              "hit_rate": 0.5685279187817259,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 160,
+              "mean_excess_return": -0.0017211274232964912,
+              "hit_rate": 0.575,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 152,
+              "mean_excess_return": 0.0013232607758691117,
+              "hit_rate": 0.5723684210526315,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 118,
+              "mean_excess_return": 0.0024315866152701945,
+              "hit_rate": 0.6440677966101694,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 81,
+              "mean_excess_return": 0.0018460476207690021,
+              "hit_rate": 0.6666666666666666,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=1.88。按冻结的两日逆向规则做多，收缩后的毛超额约 11.7 bp，扣除事先注册的 10 bp 往返后约 1.7 bp，上涨概率 57.1%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2025-04-03",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "恶化冲击 z=0.32，没有达到事先注册的 1.5，不做多。",
+      "sources": {
+        "news": {
+          "asof": "2025-04-03",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.3234515635922222,
+          "raw_shock_z": -0.3234515635922222,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6144445206889453,
+          "historical_probability_interval_95": [
+            0.5443610379596135,
+            0.6822455155237259
+          ],
+          "unconditional_hit_rate": 0.5872229465449804,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0005840391935410247,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 170,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 182,
+              "mean_excess_return": 0.0020516756791734525,
+              "hit_rate": 0.5934065934065934,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 170,
+              "mean_excess_return": 0.0005840391935410247,
+              "hit_rate": 0.6176470588235294,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 151,
+              "mean_excess_return": 0.0022872162489900702,
+              "hit_rate": 0.6622516556291391,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 143,
+              "mean_excess_return": 0.0037706455744239216,
+              "hit_rate": 0.6713286713286714,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 116,
+              "mean_excess_return": 0.0024769092637629397,
+              "hit_rate": 0.6896551724137931,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 89,
+              "mean_excess_return": 0.0019335152131911507,
+              "hit_rate": 0.651685393258427,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.32，没有达到事先注册的 1.5，不做多。"
+        },
+        "wiki": {
+          "asof": "2025-04-03",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.8232316881914366,
+          "raw_shock_z": 0.8232316881914366,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6263128176171655,
+          "historical_probability_interval_95": [
+            0.5504387059545661,
+            0.6992139509506206
+          ],
+          "unconditional_hit_rate": 0.5918181818181818,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0005296198170753927,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 141,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 144,
+              "mean_excess_return": -0.0008249578768786895,
+              "hit_rate": 0.5277777777777778,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 141,
+              "mean_excess_return": -0.0005296198170753927,
+              "hit_rate": 0.6312056737588653,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 134,
+              "mean_excess_return": -0.0009421461270675657,
+              "hit_rate": 0.6940298507462687,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 99,
+              "mean_excess_return": 0.000504612361672757,
+              "hit_rate": 0.7070707070707071,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 81,
+              "mean_excess_return": 0.0013050537261060655,
+              "hit_rate": 0.7160493827160493,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 60,
+              "mean_excess_return": 0.0010080687253465458,
+              "hit_rate": 0.7166666666666667,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.82，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2025-04-03",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "killed_no_edge",
+          "bullish_score": 0.0,
+          "deterioration_z": 4.322233929772163,
+          "raw_shock_z": 4.322233929772163,
+          "signal": 1,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5436214758248656,
+          "historical_probability_interval_95": [
+            0.4724406393260089,
+            0.6139276547032028
+          ],
+          "unconditional_hit_rate": 0.5872229465449804,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -3.866789080703907e-05,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 169,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 189,
+              "mean_excess_return": 0.0004092030076212226,
+              "hit_rate": 0.5291005291005291,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 169,
+              "mean_excess_return": -3.866789080703907e-05,
+              "hit_rate": 0.5384615384615384,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 145,
+              "mean_excess_return": -5.2085193729973795e-05,
+              "hit_rate": 0.5862068965517241,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 135,
+              "mean_excess_return": 0.000254115521184864,
+              "hit_rate": 0.5777777777777777,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 107,
+              "mean_excess_return": -0.00033769027877172605,
+              "hit_rate": 0.6074766355140186,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 81,
+              "mean_excess_return": -0.0015581990938687788,
+              "hit_rate": 0.6419753086419753,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=4.32 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。"
+        },
+        "price": {
+          "asof": "2025-04-03",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.12386466002977012,
+          "deterioration_z": 5.675743838745687,
+          "raw_shock_z": -5.675743838745687,
+          "signal": 1,
+          "probability_up": 0.5658234773700875,
+          "probability_interval_95": [
+            0.5005663900133019,
+            0.6299670155177092
+          ],
+          "historical_probability_up": 0.5658234773700875,
+          "historical_probability_interval_95": [
+            0.5005663900133019,
+            0.6299670155177092
+          ],
+          "unconditional_hit_rate": 0.5872229465449804,
+          "expected_horizon_return": 0.0023122074362906474,
+          "expected_excess_return": 0.0012386466002977012,
+          "expected_excess_return_net": 0.00023864660029770121,
+          "unshrunk_excess_return": 0.0014208005121061872,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 204,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 228,
+              "mean_excess_return": 0.00038770511062593616,
+              "hit_rate": 0.5526315789473685,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 204,
+              "mean_excess_return": 0.0014208005121061872,
+              "hit_rate": 0.5637254901960784,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 165,
+              "mean_excess_return": -0.002014235500653624,
+              "hit_rate": 0.5696969696969697,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 156,
+              "mean_excess_return": 0.0011873444684585986,
+              "hit_rate": 0.5641025641025641,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 121,
+              "mean_excess_return": 0.0024123747237491337,
+              "hit_rate": 0.6446280991735537,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 83,
+              "mean_excess_return": 0.0014918393336004424,
+              "hit_rate": 0.6506024096385542,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=5.68。按冻结的两日逆向规则做多，收缩后的毛超额约 12.4 bp，扣除事先注册的 10 bp 往返后约 2.4 bp，上涨概率 56.6%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2025-04-09",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "恶化冲击 z=0.26，没有达到事先注册的 1.5，不做多。",
+      "sources": {
+        "news": {
+          "asof": "2025-04-09",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.26032713488531484,
+          "raw_shock_z": -0.26032713488531484,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6144075348569391,
+          "historical_probability_interval_95": [
+            0.5443231845224904,
+            0.6822101348116525
+          ],
+          "unconditional_hit_rate": 0.5868715811409221,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0006098681286411558,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 170,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 182,
+              "mean_excess_return": 0.002044673797355905,
+              "hit_rate": 0.5934065934065934,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 170,
+              "mean_excess_return": 0.0006098681286411558,
+              "hit_rate": 0.6176470588235294,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 151,
+              "mean_excess_return": 0.0023665872887845534,
+              "hit_rate": 0.6622516556291391,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 143,
+              "mean_excess_return": 0.00386003066754415,
+              "hit_rate": 0.6713286713286714,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 116,
+              "mean_excess_return": 0.002586378249913506,
+              "hit_rate": 0.6896551724137931,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 90,
+              "mean_excess_return": 0.0008072259755382231,
+              "hit_rate": 0.6444444444444445,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.26，没有达到事先注册的 1.5，不做多。"
+        },
+        "wiki": {
+          "asof": "2025-04-09",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -2.235445539177933,
+          "raw_shock_z": -2.235445539177933,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6223701014989581,
+          "historical_probability_interval_95": [
+            0.546623234184434,
+            0.6952545475198506
+          ],
+          "unconditional_hit_rate": 0.5911978221415608,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0006113725341788086,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 142,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 146,
+              "mean_excess_return": -0.00012633930426023164,
+              "hit_rate": 0.5273972602739726,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 142,
+              "mean_excess_return": -0.0006113725341788086,
+              "hit_rate": 0.6267605633802817,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 135,
+              "mean_excess_return": -0.0015607088821452753,
+              "hit_rate": 0.6888888888888889,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 100,
+              "mean_excess_return": -0.0005222510599254587,
+              "hit_rate": 0.7,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 81,
+              "mean_excess_return": 0.0014965304996679626,
+              "hit_rate": 0.7160493827160493,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 60,
+              "mean_excess_return": 0.0011829321843169031,
+              "hit_rate": 0.7166666666666667,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-2.24，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2025-04-09",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -8.3058788129435,
+          "raw_shock_z": -8.3058788129435,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5407233243306233,
+          "historical_probability_interval_95": [
+            0.4697238193019617,
+            0.6109105802458206
+          ],
+          "unconditional_hit_rate": 0.5868715811409221,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.00037316127101291274,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 170,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 191,
+              "mean_excess_return": 0.0006356321953329577,
+              "hit_rate": 0.5287958115183246,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 170,
+              "mean_excess_return": -0.00037316127101291274,
+              "hit_rate": 0.5352941176470588,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 145,
+              "mean_excess_return": 2.7285846064509407e-05,
+              "hit_rate": 0.5862068965517241,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 136,
+              "mean_excess_return": -0.0003447934895153362,
+              "hit_rate": 0.5735294117647058,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 107,
+              "mean_excess_return": -0.00022822129262115975,
+              "hit_rate": 0.6074766355140186,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 81,
+              "mean_excess_return": -0.0014585950004491616,
+              "hit_rate": 0.6419753086419753,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-8.31，没有达到事先注册的 1.5，不做多。"
+        },
+        "price": {
+          "asof": "2025-04-09",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -10.514734611064638,
+          "raw_shock_z": 10.514734611064638,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.563277473879193,
+          "historical_probability_interval_95": [
+            0.49814400970687256,
+            0.627345216873086
+          ],
+          "unconditional_hit_rate": 0.5868715811409221,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.001140706217913957,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 205,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 230,
+              "mean_excess_return": 0.0005747394465217955,
+              "hit_rate": 0.5521739130434783,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 205,
+              "mean_excess_return": 0.001140706217913957,
+              "hit_rate": 0.5609756097560976,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 165,
+              "mean_excess_return": -0.001934864460859141,
+              "hit_rate": 0.5696969696969697,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 157,
+              "mean_excess_return": 0.0006745561407708526,
+              "hit_rate": 0.5605095541401274,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 121,
+              "mean_excess_return": 0.0025218437098997,
+              "hit_rate": 0.6446280991735537,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 83,
+              "mean_excess_return": 0.0015914434270200596,
+              "hit_rate": 0.6506024096385542,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-10.51，没有达到事先注册的 1.5，不做多。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2026-06-05",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "恶化冲击 z=0.57，没有达到事先注册的 1.5，不做多。",
+      "sources": {
+        "news": {
+          "asof": "2026-06-05",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.5655075333466877,
+          "raw_shock_z": -0.5655075333466877,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6150020427085091,
+          "historical_probability_interval_95": [
+            0.546374270241031,
+            0.6814288965404133
+          ],
+          "unconditional_hit_rate": 0.5885202228142408,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0005398193282118756,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 178,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 190,
+              "mean_excess_return": 0.0018456935544797393,
+              "hit_rate": 0.5842105263157895,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 178,
+              "mean_excess_return": 0.0005398193282118756,
+              "hit_rate": 0.6179775280898876,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 158,
+              "mean_excess_return": 0.0018355492558481579,
+              "hit_rate": 0.6518987341772152,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 149,
+              "mean_excess_return": 0.0034246719829123234,
+              "hit_rate": 0.6711409395973155,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 120,
+              "mean_excess_return": 0.0016393346580618594,
+              "hit_rate": 0.675,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 93,
+              "mean_excess_return": -0.0007512581356968646,
+              "hit_rate": 0.6451612903225806,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.57，没有达到事先注册的 1.5，不做多。"
+        },
+        "wiki": {
+          "asof": "2026-06-05",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": -0.4162792116134531,
+          "raw_shock_z": -0.4162792116134531,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6150761828388132,
+          "historical_probability_interval_95": [
+            0.5424573383219219,
+            0.6852313472331362
+          ],
+          "unconditional_hit_rate": 0.5934242181234964,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0007545328021450132,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 157,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 161,
+              "mean_excess_return": -3.127717138883652e-05,
+              "hit_rate": 0.5341614906832298,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 157,
+              "mean_excess_return": -0.0007545328021450132,
+              "hit_rate": 0.6178343949044586,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 150,
+              "mean_excess_return": -0.0013677844800902294,
+              "hit_rate": 0.68,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 111,
+              "mean_excess_return": -0.0011790724027631134,
+              "hit_rate": 0.6756756756756757,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 90,
+              "mean_excess_return": 0.00017384891435158652,
+              "hit_rate": 0.6777777777777778,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 66,
+              "mean_excess_return": 0.002202772450200459,
+              "hit_rate": 0.7272727272727273,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=-0.42，没有达到事先注册的 1.5，不做多。"
+        },
+        "vix": {
+          "asof": "2026-06-05",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.04247523039695327,
+          "deterioration_z": 4.1519356118652295,
+          "raw_shock_z": 4.1519356118652295,
+          "signal": 1,
+          "probability_up": 0.557210174904999,
+          "probability_interval_95": [
+            0.487549372446005,
+            0.6257704558641892
+          ],
+          "historical_probability_up": 0.557210174904999,
+          "historical_probability_interval_95": [
+            0.487549372446005,
+            0.6257704558641892
+          ],
+          "unconditional_hit_rate": 0.5885202228142408,
+          "expected_horizon_return": 0.0015834999083253587,
+          "expected_excess_return": 0.00042475230396953273,
+          "expected_excess_return_net": -0.0005752476960304673,
+          "unshrunk_excess_return": 0.0004967442198965722,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 177,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 198,
+              "mean_excess_return": 0.0009683192750439637,
+              "hit_rate": 0.5404040404040404,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 177,
+              "mean_excess_return": 0.0004967442198965722,
+              "hit_rate": 0.5536723163841808,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 151,
+              "mean_excess_return": 0.0008142085719002206,
+              "hit_rate": 0.5960264900662252,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 142,
+              "mean_excess_return": 0.0008298434963099023,
+              "hit_rate": 0.5845070422535211,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 113,
+              "mean_excess_return": 0.0004403623602611999,
+              "hit_rate": 0.6106194690265486,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 85,
+              "mean_excess_return": -0.0018017288838919274,
+              "hit_rate": 0.6470588235294118,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=4.15。按冻结的两日逆向规则做多，收缩后的毛超额约 4.2 bp，扣除事先注册的 10 bp 往返后约 -5.8 bp，上涨概率 55.7%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        },
+        "price": {
+          "asof": "2026-06-05",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 1,
+          "stance": "long",
+          "reason": "historical_edge",
+          "bullish_score": 0.10022946552633372,
+          "deterioration_z": 3.6027814218261622,
+          "raw_shock_z": -3.6027814218261622,
+          "signal": 1,
+          "probability_up": 0.5617766426678996,
+          "probability_interval_95": [
+            0.49748414043426215,
+            0.6250557297311948
+          ],
+          "historical_probability_up": 0.5617766426678996,
+          "historical_probability_interval_95": [
+            0.49748414043426215,
+            0.6250557297311948
+          ],
+          "unconditional_hit_rate": 0.5885202228142408,
+          "expected_horizon_return": 0.002161042259619163,
+          "expected_excess_return": 0.0010022946552633372,
+          "expected_excess_return_net": 2.294655263337204e-06,
+          "unshrunk_excess_return": 0.001144801004352911,
+          "hold_trading_days": 2,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 3,
+          "n_historical_trades": 211,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 237,
+              "mean_excess_return": 0.0007323656650743811,
+              "hit_rate": 0.5569620253164557,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 211,
+              "mean_excess_return": 0.001144801004352911,
+              "hit_rate": 0.5592417061611374,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 171,
+              "mean_excess_return": -0.0015351270385671508,
+              "hit_rate": 0.5847953216374269,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 163,
+              "mean_excess_return": 0.0014334415701031606,
+              "hit_rate": 0.5766871165644172,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 127,
+              "mean_excess_return": 0.0029015867173365576,
+              "hit_rate": 0.6535433070866141,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 87,
+              "mean_excess_return": 0.0017794125362280595,
+              "hit_rate": 0.6551724137931034,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=3.60。按冻结的两日逆向规则做多，收缩后的毛超额约 10.0 bp，扣除事先注册的 10 bp 往返后约 0.0 bp，上涨概率 56.2%。概率是以往不重叠交易的命中率，不是模型当场的信心。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    },
+    {
+      "asof": "2026-10-13",
+      "recommended": 0,
+      "stance": "flat",
+      "primary_source": "news",
+      "bullish_score": 0.0,
+      "probability_up": null,
+      "probability_interval_95": null,
+      "expected_excess_return": null,
+      "expected_horizon_return": null,
+      "hold_trading_days": 0,
+      "policy_hold_trading_days": 2,
+      "agreement": "both_flat",
+      "rationale": "这一天没有可用的舆论冲击，不做多。",
+      "sources": {
+        "news": {
+          "asof": "2026-10-13",
+          "source": "news",
+          "source_kind": "news_tone",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": null,
+          "raw_shock_z": null,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6168085567715296,
+          "historical_probability_interval_95": [
+            0.5483975602407772,
+            0.6829953030913045
+          ],
+          "unconditional_hit_rate": 0.5872451398767188,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0005720552410004493,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 179,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 191,
+              "mean_excess_return": 0.0018744873349138724,
+              "hit_rate": 0.5863874345549738,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 179,
+              "mean_excess_return": 0.0005720552410004493,
+              "hit_rate": 0.6201117318435754,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 159,
+              "mean_excess_return": 0.0017934160523926657,
+              "hit_rate": 0.6477987421383647,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 150,
+              "mean_excess_return": 0.0033710122622038472,
+              "hit_rate": 0.6666666666666666,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 121,
+              "mean_excess_return": 0.001792113262904605,
+              "hit_rate": 0.6776859504132231,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 94,
+              "mean_excess_return": -0.000358007656220672,
+              "hit_rate": 0.648936170212766,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "这一天没有可用的舆论冲击，不做多。"
+        },
+        "wiki": {
+          "asof": "2026-10-13",
+          "source": "wiki",
+          "source_kind": "attention",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "killed_no_edge",
+          "bullish_score": 0.0,
+          "deterioration_z": 1.6785424618294447,
+          "raw_shock_z": 1.6785424618294447,
+          "signal": 1,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.6165216453101299,
+          "historical_probability_interval_95": [
+            0.5451485983255095,
+            0.6854818774312853
+          ],
+          "unconditional_hit_rate": 0.5911730545876888,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": -0.0006521401029457053,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 163,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 167,
+              "mean_excess_return": -0.00013992134221500643,
+              "hit_rate": 0.5269461077844312,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 163,
+              "mean_excess_return": -0.0006521401029457053,
+              "hit_rate": 0.6196319018404908,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 157,
+              "mean_excess_return": -0.0012292733898723023,
+              "hit_rate": 0.6815286624203821,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 117,
+              "mean_excess_return": -0.0011858170628599697,
+              "hit_rate": 0.6666666666666666,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 95,
+              "mean_excess_return": -0.00035320320289005877,
+              "hit_rate": 0.6526315789473685,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 69,
+              "mean_excess_return": 0.001897013647419104,
+              "hit_rate": 0.7246376811594203,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=1.68 已达到阈值，但这套规则在评估样本里已经完成的交易平均超额不大于零，停止做多。"
+        },
+        "vix": {
+          "asof": "2026-10-13",
+          "source": "vix",
+          "source_kind": "market_fear_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.04160148508807258,
+          "raw_shock_z": 0.04160148508807258,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5587245139876719,
+          "historical_probability_interval_95": [
+            0.48959865679279757,
+            0.6267376690206504
+          ],
+          "unconditional_hit_rate": 0.5872451398767188,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.0007258585774139296,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 180,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 201,
+              "mean_excess_return": 0.0011222481626946145,
+              "hit_rate": 0.5472636815920398,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 180,
+              "mean_excess_return": 0.0007258585774139296,
+              "hit_rate": 0.5555555555555556,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 153,
+              "mean_excess_return": 0.0011610242841222575,
+              "hit_rate": 0.6013071895424836,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 144,
+              "mean_excess_return": 0.00121700449450333,
+              "hit_rate": 0.5902777777777778,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 115,
+              "mean_excess_return": 0.000989132983646471,
+              "hit_rate": 0.6173913043478261,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 87,
+              "mean_excess_return": -0.001191140109989157,
+              "hit_rate": 0.6551724137931034,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.04，没有达到事先注册的 1.5，不做多。"
+        },
+        "price": {
+          "asof": "2026-10-13",
+          "source": "price",
+          "source_kind": "price_reversal_control",
+          "ticker": "SPY",
+          "recommended": 0,
+          "stance": "flat",
+          "reason": "no_signal",
+          "bullish_score": 0.0,
+          "deterioration_z": 0.09500927312378574,
+          "raw_shock_z": -0.09500927312378574,
+          "signal": 0,
+          "probability_up": null,
+          "probability_interval_95": null,
+          "historical_probability_up": 0.5685438936604825,
+          "historical_probability_interval_95": [
+            0.505131002644263,
+            0.630860833211633
+          ],
+          "unconditional_hit_rate": 0.5872451398767188,
+          "expected_horizon_return": null,
+          "expected_excess_return": null,
+          "expected_excess_return_net": null,
+          "unshrunk_excess_return": 0.001337793481236974,
+          "hold_trading_days": 0,
+          "policy_hold_trading_days": 2,
+          "hold_calendar_days_approx": 0,
+          "n_historical_trades": 217,
+          "execution": "enter at the signal close, hold the next 2 trading sessions",
+          "horizon_profile_not_used_for_decision": [
+            {
+              "hold_trading_days": 1,
+              "n_trades": 243,
+              "mean_excess_return": 0.0008910579101515389,
+              "hit_rate": 0.5637860082304527,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 2,
+              "n_trades": 217,
+              "mean_excess_return": 0.001337793481236974,
+              "hit_rate": 0.5668202764976958,
+              "used_for_decision": 1
+            },
+            {
+              "hold_trading_days": 4,
+              "n_trades": 174,
+              "mean_excess_return": -0.0016493774524065168,
+              "hit_rate": 0.5804597701149425,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 5,
+              "n_trades": 166,
+              "mean_excess_return": 0.0013948002535066925,
+              "hit_rate": 0.5783132530120482,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 10,
+              "n_trades": 130,
+              "mean_excess_return": 0.0032739615807998255,
+              "hit_rate": 0.6615384615384615,
+              "used_for_decision": 0
+            },
+            {
+              "hold_trading_days": 20,
+              "n_trades": 90,
+              "mean_excess_return": 0.0020706485023688614,
+              "hit_rate": 0.6666666666666666,
+              "used_for_decision": 0
+            }
+          ],
+          "bullish_score_scale": "1.0 = 100 bp of shrunk excess over the 2-day hold; literature-prior scores are capped at 0.3",
+          "rationale": "恶化冲击 z=0.10，没有达到事先注册的 1.5，不做多。"
+        }
+      },
+      "vintage_warning": "旧金山联储新闻语气是最新修订版，不是当年当天已经公布的版本。维基关注度、VIX 和价格是时点数据，用来核对这条新闻语气规则。"
+    }
+  ],
+  "production_rule": {
+    "shock_z": 1.5,
+    "hold": 2,
+    "delay": 0,
+    "cost_per_side": 0.0005,
+    "direction": "contrarian_on_deterioration",
+    "ml_replaces_rule": 0
+  }
+}

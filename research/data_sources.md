@@ -1,6 +1,6 @@
 # 无密钥数据源实测（2026-10-14）
 
-探测用 Python 3.12 的 `urllib` 直接发 HTTPS，没有注册、没有 API key。价格全历史只在这次核实里拉过一次；`probe_sources.py` 只打短窗口和样例。GDELT DOC 2.0 的时间序列 JSON 这次没有拿到，下面不补字段名。
+探测用 Python 3.12 的 `urllib` 直接发 HTTPS，没有注册、没有 API key。价格全历史只在这次核实里拉过一次；`probe_sources.py` 只打短窗口和样例。GDELT DOC 的月度时间序列已经拿到 JSON；artlist 和整年在连发时是 429。
 
 ## 现在能用
 
@@ -16,7 +16,8 @@
 | 自建 tone / 标题 | GDELT v2 GKG 15 分钟 zip | 历史文件成功；单文件约 5–6MB |
 | 2026 年中以后的标题 | GDELT v5 weblegacy ngrams | 样例文件成功，覆盖不到 2017 |
 | Stooq CSV | `stooq.com/q/d/l` | 失败，JS 校验 |
-| GDELT DOC 时间序列和 artlist | `api.gdeltproject.org` | 失败，实质性窗口都是 HTTP 429 |
+| GDELT DOC 月度 tone / 篇数 | `api.gdeltproject.org` | 成功，日频，一个月未截断；出口上要隔一两分钟 |
+| GDELT DOC artlist、整年 | 同上 | 紧跟着的请求仍是 429，标题字段还没拿到 |
 
 ## 1. Yahoo Finance 日线
 
@@ -111,7 +112,7 @@ https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all
 
 浏览量按 UTC 日切。美东收盘时，当天的 UTC 日还没结束。用到交易日 t 的特征，取 UTC 日 t-1 的 `views`。
 
-## 6. GDELT DOC 2.0：本次没有 JSON
+## 6. GDELT DOC 2.0
 
 接口：
 
@@ -119,45 +120,65 @@ https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all
 https://api.gdeltproject.org/api/v2/doc/doc
 ```
 
-429 正文（纯文本，不是 JSON）：
+这台出口上，连续请求会 HTTP 429，正文是纯文本：
 
 ```
 Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.
 ```
 
-并指向 web ngrams，说明 legacy search 正在迁往 Spanner。官方博客同一说法：<https://blog.gdeltproject.org/using-the-new-web-ngrams-dataset-to-find-relevant-coverage/>（页面日期 2026-06-30）。
+官方博客把原因写成 legacy search 正在迁 Spanner：<https://blog.gdeltproject.org/using-the-new-web-ngrams-dataset-to-find-relevant-coverage/>（2026-06-30）。实测比「5 秒一次」更严：间隔 8–180 秒仍经常 429；安静大约 8–10 分钟后的下一次，或 429 之后再等约 90 秒的重试，可以打通。不要并行。
 
-下面这些 URL 在 2026-10-14 都返回 HTTP 429，耗时大约 10–13 秒。间隔试过 8 秒、25 秒、90 秒、180 秒，月窗口和 1 日窗口一样被拒。因此分不清「5 秒一次」和「长查询被拒」；从这台出口看，连 1 日窗口都不是稳定可用的。
+### 6.1 月度 timelinetone：成功，日频，未截断
 
-月，tone，`stock market`：
+安静约 10 分钟后，HTTP 200，`application/json`，1,684 字节，耗时 17 秒。
 
 ```
 https://api.gdeltproject.org/api/v2/doc/doc?query=stock%20market&mode=timelinetone&format=json&startdatetime=20200101000000&enddatetime=20200201000000
 ```
 
-月，原始篇数，`(stock market OR recession OR "wall street")`：
+```json
+{
+  "query_details": {"title": "stock market", "date_resolution": "day"},
+  "timeline": [{
+    "series": "Average Tone",
+    "data": [
+      {"date": "20200101T000000Z", "value": 0.4212},
+      {"date": "20200102T000000Z", "value": 0.4351}
+    ]
+  }]
+}
+```
+
+- 顶层只有 `query_details`、`timeline`
+- `query_details` 只有 `title`、`date_resolution`
+- `timeline` 长度为 1；`series` 为 `Average Tone`
+- 点字段只有 `date`、`value`。`date` 形如 `20200101T000000Z`，`value` 是浮点
+- `date_resolution` 为 `day`。32 个点，2020-01-01 到 2020-02-01 都在，间隔全是 86400 秒。结束日包含在内。没有截断
+- value 最小 -1.2992，最大 0.4684，均值约 -0.2143
+
+这是日频，不是 15 分钟。更短窗口会不会改成 15 分钟，这次没有第二份成功 JSON。`timespan=15min` 在早一次 200 里只返回纯文本 `Timespan is too short.`
+
+### 6.2 月度 timelinevolraw：成功，日频，多一个 norm
+
+第一次（上一成功之后 10 秒）429。等 90 秒重试，HTTP 200，2,147 字节。
 
 ```
 https://api.gdeltproject.org/api/v2/doc/doc?query=%28stock%20market%20OR%20recession%20OR%20%22wall%20street%22%29&mode=timelinevolraw&format=json&startdatetime=20200101000000&enddatetime=20200201000000
 ```
 
-artlist，同一 OR 查询，2020-01-01 至 2020-01-03，`maxrecords=3`：
+`date_resolution` 仍是 `day`。`series` 为 `Article Count`。点字段是 `date`、`value`、`norm`。`value` 和 `norm` 都是整数。32 天，2020-01-01 至 2020-02-01，间隔全是 1 天，未截断。
+
+样例：`{"date": "20200101T000000Z", "value": 30123, "norm": 262970}`。该月 `value` 从 24,092 到 69,451。响应里没有解释 `norm`。它比 `value` 大一个数量级，不要把它当成情感分，也不要直接当文章数；文章数用 `value`。
+
+### 6.3 artlist 和整年：这次还是 429
+
+artlist（OR 查询，2020-01-01 至 2020-01-03，`maxrecords=3`，`sort=hybridrel`）在 volraw 成功后 10 秒，以及再等 90 秒，都是 429。整年 2019-01-01 至 2020-01-01 的 tone 和 volraw 在早先的连发里也是 429，结构未知。标题字段不能从这次 artlist 填写。标题样例改用下面已经打开的 GKG `PAGE_TITLE` 和 ngrams `title`。
 
 ```
 https://api.gdeltproject.org/api/v2/doc/doc?query=%28stock%20market%20OR%20recession%20OR%20%22wall%20street%22%29&mode=artlist&format=json&startdatetime=20200101000000&enddatetime=20200103000000&maxrecords=3&sort=hybridrel
 ```
 
-整年 2019-01-01 至 2020-01-01，`timelinetone`（query=`stock market`）和 `timelinevolraw`（OR 查询）同样 429。
-
-唯一一次 HTTP 200 是安静约 8 分钟后的 15 分钟窗口：
-
-```
-https://api.gdeltproject.org/api/v2/doc/doc?query=stock%20market&mode=timelinetone&format=json&timespan=15min
-```
-
-正文是纯文本 `Timespan is too short.`，没有 `timeline` 或 `articles`。紧接着的 1 日 `startdatetime` 又变回 429。
-
-所以：**日频还是 15 分钟、有没有截断、artlist 的标题字段，这次都没有活体 JSON 可以记。** 不要把文档或记忆里的 `date` / `value` / `title` 当成已经验证。恢复后串行、至少隔 8 秒，429 就按 60 秒、180 秒、600 秒退避，不要并行。先用 1 日窗口看结构，再决定按日还是按月。整年一次请求在这次环境里没有成功过。
+拉取：按月串行。两次之间至少隔 90 秒；若 429，等 8–10 分钟再发一个。一个月的日频 JSON 只有 2KB 量级，不必按日再切，除非 429 只对更长窗口出现。整年先不要一次拉取，这次没有成功样本。
 
 ## 7. 能替代 DOC 的 GDELT 文件
 
@@ -296,7 +317,7 @@ HTTP 200，90,486 字节。解压路径 `vader_lexicon/vader_lexicon.txt`，7,51
 - `epu_z_t`：EPU `daily_policy_index` 取严格早于 t 的最近日历日，再做同样的 60 日 z。
 - `wiki_rec_z_t`：`log(1 + Recession 的 views)`，用 UTC 日 t-1，再做 60 日 z。`Stock_market` 同样做一条，当作关注度而不是方向。
 
-自建分数先不要进主回归。若 DOC 恢复，或愿意跑 GKG：只保留英文、`PAGE_TITLE` 命中 `stock market|stocks|wall street|recession` 的文档，对 V2Tone 的 Tone 在「上一 SPY 收盘到这次收盘」之间取平均，得到 `gdelt_tone_t`。同一批标题再算 VADER compound 的平均 `vader_t`，以及 LM 的 `(n_pos - n_neg) / (n_pos + n_neg)`（分母为 0 记缺失）。`ECON_STOCKMARKET` 主题单独使用会把 “stock images” 算进来。
+GDELT 月度 `timelinetone` 可以做第四条对照，不替代旧金山联储。`gdelt_tone_t` 用 `timeline[0].data[].value`，`date` 取 UTC 日。交易日 t 只用严格早于 t 的那个 UTC 日。`timelinevolraw` 的 `value` 是当天文章数，可做覆盖度，`norm` 先不用。这个接口在本机上两次请求要隔 90 秒以上，所以它是月度批量拉下来的序列，不是盘中刷新。标题级 VADER 或 LM 仍要从 GKG / ngrams 来，DOC artlist 这次没有返回。`ECON_STOCKMARKET` 主题会把 “stock images” 算进来。
 
 做多回测看的是 `news_z_t` 对 `y_{t+1}` 的单调性和扣费后的多头收益。`vix_chg_t` 放进同一回归：情感要在控制 VIX 变化之后还在，才不是恐惧的别名。
 
@@ -307,6 +328,6 @@ HTTP 200，90,486 字节。解压路径 `vader_lexicon/vader_lexicon.txt`，7,51
 3. 旧金山联储 xlsx 一次，读 `Data` 页。CSV 只做核对。
 4. EPU CSV 一次。维基两篇文章各一次。
 5. LM CSV 和 VADER zip 各一次，提交进缓存，不要放进每日作业。
-6. GDELT DOC 不要和上面并行。作业若重试，一次只发一个请求；429 就拉长等待。在拿到一个月的真实 JSON 之前，不要写死字段。
+6. GDELT DOC 按月串行，与上面的下载不要并行。两次至少隔 90 秒；429 就等 8–10 分钟再发一个。月度 tone 用 `value`，月度篇数用 `timelinevolraw` 的 `value`。整年和 artlist 这次没打通，不要按未验证的字段写解析。
 7. GKG 只在需要自建 tone 时按 `masterfilelist` 逐个 15 分钟文件流式聚合，按月存日频结果。
 8. v5 ngrams 只适合 2026-06-30 之后的标题抽样。没有清单，不能靠猜每一分钟的文件名补历史。

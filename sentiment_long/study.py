@@ -33,7 +33,7 @@ from sentiment_long.config import (
 )
 from sentiment_long.engine import (
     asset_returns,
-    cover_from_signal,
+    cover_nonoverlapping,
     equity_stats,
     excess_tstat,
     iter_fixed_trades,
@@ -83,7 +83,7 @@ def evaluate(
     start_ts = pd.Timestamp(start)
     end_ts = pd.Timestamp(end) if end else pd.Timestamp(dates.max())
     asset = asset_returns(close)
-    cover = cover_from_signal(signal, hold, delay)
+    cover = cover_nonoverlapping(signal, hold, delay)
     strat = strategy_returns(asset, cover, cost)
     bench = np.where(np.isfinite(asset), asset, 0.0)
     mask = np.asarray((dates >= start_ts) & (dates <= end_ts))
@@ -253,7 +253,10 @@ def run_ml(panel: pd.DataFrame) -> dict:
                 "hit_rate": metrics["hit_rate"],
                 "exposure": metrics["exposure"],
             }
-        out["models"][name]["n_iter"] = int(getattr(model, "n_iter_", 0) or 0)
+        n_iter = getattr(model, "n_iter_", 0)
+        if isinstance(n_iter, np.ndarray):
+            n_iter = int(n_iter.reshape(-1)[0]) if n_iter.size else 0
+        out["models"][name]["n_iter"] = int(n_iter or 0)
     rule_val = evaluate(panel, make_signals(panel)["news"], HOLD_FAST, DELAY_FAST, COST_PER_SIDE, VAL_START, VAL_END)
     rule_test = evaluate(panel, make_signals(panel)["news"], HOLD_FAST, DELAY_FAST, COST_PER_SIDE, NEWS_EVAL_START, None)
     out["rule_val_sharpe"] = rule_val["sharpe"]
@@ -463,7 +466,7 @@ def run(refresh: bool = False) -> dict:
         ("price_fast", DELAY_FAST, HOLD_FAST),
     ):
         source = key.split("_")[0]
-        cover = cover_from_signal(base_signals[source], hold, delay)
+        cover = cover_nonoverlapping(base_signals[source], hold, delay)
         curve[key] = strategy_returns(asset, cover, COST_PER_SIDE)
 
     score_dates = [
