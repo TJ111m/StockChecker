@@ -111,5 +111,17 @@ class TimingTests(unittest.TestCase):
         self.assertEqual(on_signal["n_historical_trades"], on_signal_later["n_historical_trades"])
 
 
+class ChinaTimingTests(unittest.TestCase):
+    def test_newspaper_signal_earns_the_next_month_only(self):
+        from sentiment_long.cn_study import run_monthly
+
+        index = pd.to_datetime(["2020-01-31", "2020-02-28", "2020-03-31", "2020-04-30"])
+        table = pd.DataFrame({"ret": [0.0, -0.10, 0.05, 0.02]}, index=index)
+        signal = np.array([True, False, False, False])
+        stats = run_monthly(table, signal, delay=0, cost=0.0, start="2020-01-01", end="2020-04-30")
+        self.assertEqual(stats["n_trades"], 1)
+        self.assertAlmostEqual(stats["mean_trade"], -0.10)
+
+
 if __name__ == "__main__":
     unittest.main()

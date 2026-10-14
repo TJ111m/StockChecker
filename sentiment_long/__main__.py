@@ -7,12 +7,14 @@ import json
 
 import pandas as pd
 
+from sentiment_long.cn_data import download_epu, download_indices
+from sentiment_long.cn_study import monthly_frame, run as run_cn, score_newspaper
 from sentiment_long.download import download_all, download_lexicon
 from sentiment_long.lexicon import daily_polarity, fundamental_veto, load_lists
 from sentiment_long.panel import build_panel
 from sentiment_long.paths import CACHE
 from sentiment_long.scoring import score_agent, score_mood_frame, score_source
-from sentiment_long.study import run
+from sentiment_long.study import run as run_us
 
 
 def _print(payload: dict) -> None:
@@ -37,12 +39,15 @@ def main(argv: list[str] | None = None) -> None:
     sub = parser.add_subparsers(dest="command", required=True)
 
     download = sub.add_parser("download")
+    download.add_argument("--market", default="cn", choices=["cn", "us"])
     download.add_argument("--refresh", action="store_true")
 
     backtest = sub.add_parser("backtest")
+    backtest.add_argument("--market", default="cn", choices=["cn", "us"])
     backtest.add_argument("--refresh", action="store_true")
 
     score = sub.add_parser("score")
+    score.add_argument("--market", default="cn", choices=["cn", "us"])
     score.add_argument("--source", default="agent", choices=["agent", "news", "wiki", "vix", "price", "epu"])
     score.add_argument("--asof")
     score.add_argument("--mood-csv", help="CSV with date and mood. Higher mood is more bullish.")
@@ -53,10 +58,23 @@ def main(argv: list[str] | None = None) -> None:
 
     args = parser.parse_args(argv)
     if args.command == "download":
-        download_all(refresh=args.refresh)
+        if args.market == "cn":
+            download_indices(refresh=args.refresh)
+            download_epu(refresh=args.refresh)
+        else:
+            download_all(refresh=args.refresh)
         return
     if args.command == "backtest":
-        run(refresh=args.refresh)
+        if args.market == "cn":
+            run_cn(refresh=args.refresh)
+        else:
+            run_us(refresh=args.refresh)
+        return
+    if args.market == "cn" and not args.headlines_csv and not args.mood_csv:
+        indices = download_indices(refresh=False)
+        epu = download_epu(refresh=False)
+        table = monthly_frame(indices["csi300"], epu)
+        _print(score_newspaper(table, args.asof))
         return
 
     if args.headlines_csv or args.mood_csv:

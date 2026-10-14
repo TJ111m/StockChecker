@@ -77,9 +77,10 @@ def evaluate(
     end: str | None = None,
     n_perm: int = 0,
     seed: int = RANDOM_SEED,
+    close_col: str = "spy_close",
 ) -> dict:
     dates = pd.DatetimeIndex(panel.index)
-    close = panel["spy_close"].to_numpy(dtype=float)
+    close = panel[close_col].to_numpy(dtype=float)
     start_ts = pd.Timestamp(start)
     end_ts = pd.Timestamp(end) if end else pd.Timestamp(dates.max())
     asset = asset_returns(close)
