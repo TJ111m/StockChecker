@@ -55,6 +55,7 @@ def main(argv: list[str] | None = None) -> None:
     score.add_argument("--headlines-csv", help="CSV with date and text, optional fundamental 0/1.")
     score.add_argument("--select-direction", action="store_true")
     score.add_argument("--invert-mood", action="store_true", help="Use when the file is a fear index.")
+    score.add_argument("--event-kind", choices=["panic", "euphoria"], help="Apply the 2026 preferred event rule.")
 
     args = parser.parse_args(argv)
     if args.command == "download":
@@ -71,6 +72,11 @@ def main(argv: list[str] | None = None) -> None:
             run_us(refresh=args.refresh)
         return
     if args.market == "cn" and not args.headlines_csv and not args.mood_csv:
+        if args.event_kind:
+            from sentiment_long.y2026 import advise_event
+
+            _print(advise_event(args.event_kind))
+            return
         indices = download_indices(refresh=False)
         epu = download_epu(refresh=False)
         table = monthly_frame(indices["csi300"], epu)

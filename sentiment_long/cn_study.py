@@ -519,6 +519,9 @@ def run(refresh: bool = False) -> dict:
     (out / "report.md").write_text(render(payload))
     (out / "score_examples.json").write_text(json.dumps(_jsonify(scores), indent=2, ensure_ascii=False))
     _plot(table, specs["epu_fast"][0], out)
+    from sentiment_long.y2026 import run as run_y2026
+
+    payload["y2026"] = run_y2026(refresh=refresh)
     print(f"wrote {out}")
     return payload
 

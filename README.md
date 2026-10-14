@@ -13,6 +13,11 @@ python -m sentiment_long backtest
 python -m sentiment_long score --asof 2024-09-24
 ```
 
-结果在 `results/cn/report.md`。
+结果在 `results/cn/report.md`。2026 年 42 个事件的搜索在 `results/cn/y2026_report.md`。
+
+```bash
+python -m sentiment_long score --event-kind euphoria
+python -m sentiment_long score --event-kind panic
+```
 
 美股版本仍可用 `python -m sentiment_long backtest --market us`，规则在 `RESEARCH_DESIGN.md`。自定义英文标题序列仍走 `--market us --mood-csv`。
