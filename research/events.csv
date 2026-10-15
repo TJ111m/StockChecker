@@ -1,0 +1,71 @@
+id,date,name,kind,ticker,query,prior_hypothesis,hold_days_prior,note
+yuan_devaluation_2015,2015-08-11,人民币贬值,panic,SPY,China yuan devaluation,long_contrarian,10,人民银行意外下调人民币中间价，全球风险资产下跌。日期依据：汇改公告当日。
+china_black_monday_2015,2015-08-24,中国黑色星期一,panic,SPY,China Black Monday stocks,long_contrarian,10,沪指单日大跌后全球股市跟跌，美股开盘剧烈波动。日期依据：新华社所称黑色星期一的美股交易日。
+greece_referendum_2015,2015-06-29,希腊公投冲击,panic,SPY,Greece referendum markets,long_contrarian,10,希腊宣布就纾困举行公投。公告在周末，目录用下一美股交易日。
+china_circuit_breaker_2016,2016-01-04,中国熔断首日,panic,SPY,China circuit breaker,long_contrarian,10,A股熔断机制启用首日提前收市，美股同步走弱。日期依据：熔断触发当日。
+china_circuit_breaker_2016_again,2016-01-07,中国熔断再触发,panic,SPY,China stock trading halt,long_contrarian,10,熔断再次提前收市，标普约跌2.4%。日期依据：美中经济与安全审查委员会对当日美股的记述。
+brexit_vote_2016,2016-06-24,英国脱欧公投,panic,SPY,Brexit vote markets,long_contrarian,10,脱欧公投结果明朗，避险抛售风险资产。日期依据：公投结果公布后的首个完整交易日（周五）。
+wage_inflation_scare_2018,2018-02-02,薪资通胀惊吓,panic,SPY,wage growth inflation stocks,long_contrarian,10,非农薪资增速跳升，市场交易通胀与更快加息。日期依据：就业报告发布日。
+volmageddon_2018,2018-02-05,波动率末日,panic,SPY,volatility ETF crash,long_contrarian,10,波动率空头产品挤兑，VIX飙升并拖累现货。日期依据：XIV等产品崩盘的交易日，而非事后低点。
+section_301_tariffs_2018,2018-03-22,对华301关税,panic,SPY,US China Section 301 tariffs,long_contrarian,10,美国宣布对华大规模301关税。日期依据：总统备忘录签署日；纽约联储将此日列为关税事件日。
+powell_away_from_neutral_2018,2018-10-03,远离中性讲话,panic,SPY,Powell long way from neutral,long_contrarian,10,鲍威尔称政策利率离中性还很远。日期依据：采访当日；随后更大的现货跌幅在10月10日，不另列为新信号。
+fomc_hike_dec_2018,2018-12-19,年底鹰派加息,panic,SPY,Fed December rate hike,long_contrarian,10,美联储加息并维持进一步收紧的指引。日期依据：FOMC声明日。
+christmas_eve_2018,2018-12-24,圣诞夜抛售,panic,SPY,Christmas Eve stock selloff,long_contrarian,10,政府关门与财长召集银行流动性问询叠加，半日交易仍大幅收跌。日期依据：姆努钦通话后的交易时段，纽交所提前收市但有交易。
+tariff_hike_threat_2019,2019-05-06,加税推文开市,panic,SPY,Trump China tariff threat,long_contrarian,10,特朗普于周日威胁提高对华关税。目录用下一交易日；纽约联储记该日为加税事件。
+china_retaliation_2019,2019-05-13,中国反制关税,panic,SPY,China retaliatory tariffs,long_contrarian,10,中国宣布反制关税，美股跌幅大于5月6日。日期依据：纽约联储关税事件表。
+tariff_tweet_aug_2019,2019-08-01,八月加税推文,panic,SPY,Trump new China tariffs,long_contrarian,10,特朗普宣布对剩余中国商品加征10%关税。日期依据：推文当日，纽约联储事件日。
+yuan_breaks_seven_2019,2019-08-05,人民币破七,panic,SPY,yuan breaks seven,long_contrarian,10,离岸与在岸人民币跌破7，市场交易贸易战升级。日期依据：汇率破关口的交易日。
+yield_curve_inversion_2019,2019-08-14,曲线倒挂恐慌,panic,SPY,yield curve inversion recession,long_contrarian,10,2年与10年期国债收益率倒挂，衰退叙事占据头条。日期依据：倒挂成为新闻的交易日。
+covid_selloff_20200224,2020-02-24,新冠全球抛售,panic,SPY,coronavirus stock selloff,long_contrarian,10,意大利疫情扩散后的首个美股交易日，风险资产集中下跌。日期依据：疫情外溢的舆论爆发日，不是3月低点。
+covid_breaker_20200309,2020-03-09,新冠熔断一,panic,SPY,stock market circuit breaker,long_contrarian,10,油价战叠加疫情，开盘触发一级熔断。日期依据：纽交所熔断工作组报告所列第一日。
+covid_breaker_20200312,2020-03-12,新冠熔断二,panic,SPY,pandemic stock circuit breaker,long_contrarian,10,世卫宣布大流行后的下一交易日再次熔断。日期依据：纽交所熔断报告；世卫宣布日本在3月11日。
+covid_breaker_20200316,2020-03-16,新冠熔断三,panic,SPY,Black Monday coronavirus stocks,long_contrarian,10,周末紧急降息至零并重启QE后，标普仍跌约12%并熔断。日期依据：熔断报告与当日现货。
+covid_breaker_20200318,2020-03-18,新冠熔断四,panic,SPY,March 18 circuit breaker,long_contrarian,10,第四次一级熔断，午后触发。日期依据：纽交所熔断工作组报告。
+nasdaq_airpocket_20200903,2020-09-03,科技股空气穴,panic,QQQ,Nasdaq tech selloff,long_contrarian,10,无单一宏观数据，纳指约跌5%，拥挤的科技交易瓦解。日期依据：回调首日的行情，不是事后低点。
+evergrande_20210920,2021-09-20,恒大传染担忧,panic,SPY,Evergrande contagion stocks,long_contrarian,10,恒大违约担忧在周末发酵，周一美股大跌。日期依据：路透当日全球市场综述。
+omicron_20211126,2021-11-26,奥密克戎冲击,panic,SPY,Omicron variant stocks,long_contrarian,10,世卫将奥密克戎列为关切变异株。感恩节次日美股提前收市但仍交易。
+powell_transitory_20211130,2021-11-30,退休暂时性通胀,panic,QQQ,Powell retires transitory,long_contrarian,10,鲍威尔在国会听证中放弃通胀暂时论，增长股承压。日期依据：听证当日。
+fomc_minutes_20220105,2022-01-05,纪要加速缩表,panic,QQQ,Fed minutes faster taper,long_contrarian,10,12月议息纪要显示更快结束购债。日期依据：纪要发布日下午。
+cpi_shock_20220610,2022-06-10,六月热通胀,panic,SPY,hot CPI inflation June,long_contrarian,10,5月CPI同比8.6%超预期，标普约跌2.9%。日期依据：CPI发布日。
+fed_75bp_repricing_20220613,2022-06-13,交易75基点,panic,SPY,Fed 75 basis point hike,long_contrarian,10,热CPI后的首个交易日，报道指美联储考虑一次加息75个基点。日期依据：该报道与重新定价的交易日，而非6月15日声明。
+cpi_shock_20220913,2022-09-13,九月通胀惊吓,panic,SPY,August CPI inflation shock,long_contrarian,10,8月CPI同比8.3%、核心再加速，标普约跌4.3%。日期依据：CPI发布日。
+fomc_hawkish_20220921,2022-09-21,九月鹰派点阵,panic,SPY,Fed September hawkish dots,long_contrarian,10,FOMC加息75个基点并上修终端利率。日期依据：声明与点阵公布日。
+uk_minibudget_20220923,2022-09-23,英国迷你预算,panic,TLT,UK mini budget gilts,long_contrarian,10,英国减税预算冲击国债，全球债市与风险资产承压。日期依据：预算声明日；10月现货低点不另作信号。
+svb_failure_20230310,2023-03-10,硅谷银行倒闭,panic,KRE,Silicon Valley Bank failure,long_contrarian,10,FDIC接管硅谷银行。日期依据：周五接管日。
+regional_bank_monday_20230313,2023-03-13,区域银行周一,panic,KRE,regional bank contagion,long_contrarian,10,周末签字银行被接管并推出BTFP后的首个交易日，区域银行继续被抛售。日期依据：处置公布后的开市日。
+credit_suisse_20230315,2023-03-15,瑞信流动性危机,panic,XLF,Credit Suisse shares plunge,long_contrarian,10,大股东拒绝追加注资后瑞信股价崩溃，当日晚些时候获得央行流动性。日期依据：舆论爆发的交易日。
+fomc_higher_for_longer_20230920,2023-09-20,更高更久点阵,panic,SPY,Fed higher for longer,long_contrarian,10,美联储按兵不动，但点阵把2024年降息从100个基点降到50个基点，标普约跌0.9%。日期依据：FOMC声明日。
+jobs_miss_20240802,2024-08-02,疲弱非农,panic,SPY,weak jobs report recession,long_contrarian,10,7月非农明显低于预期，衰退与降息交易升温。日期依据：就业报告发布日；平仓高潮在下一交易日。
+yen_carry_unwind_20240805,2024-08-05,日元套息平仓,panic,SPY,yen carry trade unwind,long_contrarian,10,日元套息平仓与日股闪崩外溢，标普创2024年最大单日跌幅。日期依据：BIS通报的压力峰值交易日。
+deepseek_20250127,2025-01-27,DeepSeek冲击芯片,panic,SMH,DeepSeek Nvidia selloff,long_contrarian,10,DeepSeek引发对AI资本开支的质疑，英伟达单日市值蒸发报道约5900亿美元。日期依据：舆论爆发的周一；模型发布约在1月20日。
+liberation_day_20250403,2025-04-03,解放日关税开市,panic,SPY,Liberation Day tariffs,long_contrarian,10,对等关税于4月2日收盘后宣布，标普次日约跌4.8%。日期依据：NBER工作论文所记首个反应交易日。
+china_retaliation_20250404,2025-04-04,中国反制关税,panic,SPY,China retaliatory tariffs 2025,long_contrarian,10,中国宣布反制后标普再跌约6.0%，为2025年最大单日跌幅。日期依据：反制措施与行情同日。
+china_tariff_threat_20251010,2025-10-10,对华关税再威胁,panic,SPY,Trump China tariff threat,long_contrarian,10,特朗普对华关税言论令标普跌约2.7%，为4月以来最大单日跌幅。日期依据：美联社与路透的周五交易；100%关税帖文在收盘后。
+greenland_tariffs_20260120,2026-01-20,格陵兰关税威胁,panic,SPY,Trump Greenland tariff threat,long_contrarian,10,对欧洲的关税威胁叠加日债波动，标普跌约2.1%。威胁在周末发酵，周一为马丁路德金日休市，目录用周二。依据：路透1月20日收盘。
+iran_hormuz_20260305,2026-03-05,霍尔木兹油价冲击,panic,SPY,Strait of Hormuz oil stocks,long_contrarian,10,开战第六日油价与通胀担忧升温，道指跌约1.6%、标普仅跌约0.6%。日期依据：路透3月5日收盘；标普跌幅被能源股缓冲。
+iran_tankers_20260312,2026-03-12,油轮遇袭抛售,panic,SPY,Iran oil tanker strikes stocks,long_contrarian,10,油轮遇袭、布伦特触及每桶100美元附近，标普跌约1.5%。日期依据：路透3月12日收盘。
+hot_jobs_ai_unwind_20260605,2026-06-05,强非农与芯片回撤,panic,SMH,jobs report semiconductor selloff,long_contrarian,10,5月非农约17.2万、远超预期，叠加博通指引失望，半导体指数大跌，标普跌约2.6%。日期依据：就业报告发布日。
+trump_reflation_2016,2016-11-09,当选日金融股行情,euphoria,XLF,Trump election bank rally,long_momentum,5,选举夜期货一度崩跌后转为财政扩张与放松监管交易，金融股领涨。日期依据：结果明朗后的现货交易日。
+tcja_senate_2017,2017-12-04,参议院通过减税,euphoria,SPY,Senate tax cut bill,long_momentum,5,税改法案于周六凌晨在参议院通过。目录用下一交易日；学术事件研究亦用12月4日。
+powell_patient_20190104,2019-01-04,鲍威尔转耐心,euphoria,SPY,Powell patient on rates,long_momentum,5,鲍威尔称美联储可以耐心观望，标普创2019年最大单日涨幅。日期依据：美国经济学会讲话日。
+fed_unlimited_qe_20200323,2020-03-23,无限量宽声明,euphoria,SPY,Fed unlimited quantitative easing,long_momentum,5,美联储早间宣布开放式购债与多项信贷工具。日期依据：声明日；当日现货仍收跌，明显买盘在3月24日。
+pfizer_vaccine_20201109,2020-11-09,辉瑞疫苗数据,euphoria,XBI,Pfizer vaccine efficacy,long_momentum,5,辉瑞/BioNTech公布高有效率中期数据，生物科技与价值股大涨。日期依据：盘前新闻稿。
+cpi_cooling_20221110,2022-11-10,通胀降温行情,euphoria,SPY,CPI inflation cooling stocks,long_momentum,5,10月CPI低于预期，标普涨约5.5%。日期依据：CPI发布日，假设写于数据公布之后、其后数日收益之前。
+chatgpt_launch_20221130,2022-11-30,ChatGPT发布,euphoria,QQQ,ChatGPT launch,long_momentum,5,OpenAI发布ChatGPT，AI应用叙事起点。日期依据：产品发布日；当日美股并未同步狂热。
+nvda_ai_guidance_20230525,2023-05-25,英伟达AI指引,euphoria,NVDA,Nvidia AI earnings guidance,long_momentum,5,英伟达于5月24日收盘后给出远超预期的数据中心指引，次日股价涨约24%。日期依据：业绩后的首个现货交易日。
+soft_landing_cpi_20230712,2023-07-12,软着陆CPI,euphoria,SPY,inflation falls to 3 percent,long_momentum,5,6月CPI同比降至3%，软着陆叙事升温，标普涨约0.7%。日期依据：CPI发布日。
+cpi_fed_done_20231114,2023-11-14,通胀数据点燃小盘,euphoria,IWM,CPI rally small caps,long_momentum,5,10月CPI低于预期，标普涨约1.9%、罗素2000涨约5%。日期依据：CPI发布日。
+fomc_pivot_20231213,2023-12-13,点阵转向降息,euphoria,SPY,Fed signals rate cuts,long_momentum,5,FOMC点阵给出2024年三次降息，鲍威尔称利率很可能处于或接近峰值。日期依据：声明与记者会当日。
+spot_bitcoin_etf_20240111,2024-01-11,比特币现货ETF开市,euphoria,COIN,spot bitcoin ETF trading,long_momentum,5,SEC于1月10日批准现货比特币ETF，产品11日开始交易。目录用开市日。
+nvda_earnings_split_20240523,2024-05-23,英伟达业绩与拆股,euphoria,NVDA,Nvidia earnings stock split,long_momentum,5,5月22日收盘后公布超预期营收并宣布十送一拆股，23日股价涨约9%；标普当日收跌。日期依据：业绩后的首个现货交易日。
+trump_election_20241106,2024-11-06,2024大选行情,euphoria,SPY,Trump election stock rally,long_momentum,5,大选结果明朗，标普涨约2.5%，创当年最大单日涨幅。日期依据：投票日后的交易日。
+tariff_pause_20250409,2025-04-09,关税暂停90天,euphoria,SPY,Trump tariff pause,long_momentum,5,特朗普宣布对多数对等关税暂停90天，标普涨约9.5%。日期依据：盘中宣布当日。
+us_china_truce_20250512,2025-05-12,中美关税休战,euphoria,SPY,US China tariff truce,long_momentum,5,日内瓦谈判后双方大幅下调关税90天，标普涨约3.3%。日期依据：协议公布后的周一。
+iran_peace_rumor_20260331,2026-03-31,伊朗停战传闻,euphoria,SPY,Iran war ceasefire report,long_momentum,5,未经证实的伊朗总统愿结束战争的报道推动标普涨约2.9%。日期依据：CNBC当日收盘；催化剂是传闻而非已签署协议。
+trump_election_whipsaw_2016,2016-11-09,当选夜暴涨暴跌,mixed,SPY,Trump election market whipsaw,no_trade,0,选举夜股指期货熔断式下跌后迅速反转，现货收涨。同一交易日方向相反，先验不交易。日期依据：结果公布后的交易日。
+cpi_reversal_20221013,2022-10-13,十月CPI反转,mixed,SPY,October CPI stock reversal,no_trade,0,9月CPI仍高，盘中大跌后收涨约2.6%。只记CPI发布日，不用当日盘中低点当作见底信号。
+yield_five_percent_20231023,2023-10-23,十年期触及5%,mixed,TLT,Treasury yield hits 5 percent,no_trade,0,10年期收益率盘中突破5%后回落，标普仅微跌。日期依据：收益率触及5%的交易日，债券与股票叙事分裂。
+first_republic_20230501,2023-05-01,第一共和银行处置,mixed,KRE,First Republic Bank seizure,no_trade,0,FDIC周一清晨接管第一共和银行并出售给摩根大通，倒闭与买家同时公布。日期依据：处置公告日。
+fed_first_cut_20240918,2024-09-18,首次降息50基点,mixed,SPY,Fed first rate cut,no_trade,0,美联储四年多来首次降息、幅度50个基点；盘中上涨后收盘转跌。日期依据：FOMC声明日，路透记收盘略跌。
+north_america_tariffs_20250203,2025-02-03,加墨关税开市,mixed,SPY,Trump Canada Mexico tariffs,no_trade,0,周六宣布对加墨加征25%关税、对华10%，周一标普跌约0.8%；午间墨西哥关税被暂缓。日期依据：公告后的首个交易日。
+iran_strikes_20260302,2026-03-02,美以打击伊朗开市,mixed,SPY,US Israel strikes Iran,no_trade,0,2月28日周六开始打击，周一标普开盘跌超1%后收平。日期依据：打击后的首个交易日，路透记收盘基本持平。

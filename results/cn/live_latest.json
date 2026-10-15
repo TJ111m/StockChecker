@@ -1,0 +1,56 @@
+{
+  "source": "东方财富上证指数股吧",
+  "url": "https://guba.eastmoney.com/list,zssh000001.html",
+  "asof": "2026-10-15 10:13:49",
+  "newest_post_time": "2026-10-15 10:12:22",
+  "lag_seconds": 87.3,
+  "window_minutes": 15,
+  "posts_in_window": 555,
+  "scored_negative": 54,
+  "scored_positive": 42,
+  "polarity": -0.019,
+  "bullish_score": 0.0,
+  "bearish_score": 0.019,
+  "stance": "flat",
+  "sample_titles": [
+    "3300点估计是底",
+    "最低3698",
+    "2800点见！快跑！",
+    "爽啊，过年钱来了",
+    "真是一个"
+  ],
+  "history_from": "2026-10-15 09:37:03",
+  "history_to": "2026-10-15 10:12:22",
+  "posts_fetched": 1517,
+  "pages": 20,
+  "forward": [
+    {
+      "minutes": 5,
+      "negative_buckets": 6,
+      "negative_mean_net": -0.001,
+      "positive_buckets": 2,
+      "positive_mean_net": -0.001
+    },
+    {
+      "minutes": 15,
+      "negative_buckets": 5,
+      "negative_mean_net": -0.0019444531943016755,
+      "positive_buckets": 1,
+      "positive_mean_net": 0.0007570001412821057
+    },
+    {
+      "minutes": 30,
+      "negative_buckets": 2,
+      "negative_mean_net": -0.0030072380973725768,
+      "positive_buckets": 1,
+      "positive_mean_net": -0.0010753343896193748
+    },
+    {
+      "minutes": 60,
+      "negative_buckets": 0,
+      "negative_mean_net": null,
+      "positive_buckets": 0,
+      "positive_mean_net": null
+    }
+  ]
+}
