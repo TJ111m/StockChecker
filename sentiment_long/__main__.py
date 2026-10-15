@@ -46,6 +46,9 @@ def main(argv: list[str] | None = None) -> None:
     backtest.add_argument("--market", default="cn", choices=["cn", "us"])
     backtest.add_argument("--refresh", action="store_true")
 
+    live = sub.add_parser("live")
+    live.add_argument("--pages", type=int, default=25)
+
     score = sub.add_parser("score")
     score.add_argument("--market", default="cn", choices=["cn", "us"])
     score.add_argument("--source", default="agent", choices=["agent", "news", "wiki", "vix", "price", "epu"])
@@ -58,6 +61,11 @@ def main(argv: list[str] | None = None) -> None:
     score.add_argument("--event-kind", choices=["panic", "euphoria"], help="Apply the 2026 preferred event rule.")
 
     args = parser.parse_args(argv)
+    if args.command == "live":
+        from sentiment_long.live_opinion import run as run_live
+
+        _print(run_live(pages=args.pages))
+        return
     if args.command == "download":
         if args.market == "cn":
             download_indices(refresh=args.refresh)

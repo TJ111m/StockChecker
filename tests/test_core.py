@@ -111,6 +111,15 @@ class TimingTests(unittest.TestCase):
         self.assertEqual(on_signal["n_historical_trades"], on_signal_later["n_historical_trades"])
 
 
+class GubaScoreTests(unittest.TestCase):
+    def test_title_polarity(self):
+        from sentiment_long.live_opinion import score_title
+
+        self.assertGreater(score_title("今天涨停，利好加仓"), 0)
+        self.assertLess(score_title("暴跌割肉，恐慌出逃"), 0)
+        self.assertEqual(score_title("开会讨论"), 0.0)
+
+
 class ChinaTimingTests(unittest.TestCase):
     def test_newspaper_signal_earns_the_next_month_only(self):
         from sentiment_long.cn_study import run_monthly
