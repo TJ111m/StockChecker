@@ -6,6 +6,14 @@
 
 ## 运行
 
+实时舆情是东方财富上证指数股吧，不是报纸月报：
+
+```bash
+python -m sentiment_long live
+```
+
+最新帖子时间和滞后秒数写在 `results/cn/live_latest.json`。
+
 ```bash
 pip install -r requirements.txt
 python -m unittest tests.test_core
